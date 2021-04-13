@@ -1,28 +1,17 @@
 import React from 'react';
 
-import logo from './logo.png';
 import './App.css';
 
 function App() {
   return (
-    <main className="rsw-container">
-      <div
-        className="rsw-item"
-        style={{
-          paddingBottom: '2rem',
-        }}>
-        <img src={logo} width="20%" alt="WCS logo" />
+    <div className="grid grid-cols-1 grid-rows-strp w-screen min-h-screen">
+      <div className="bg-red-300 grid grid-cols-header">
+        <div className="logo"></div>
+        <div className="navbar"></div>
       </div>
-      <div className="rsw-item">
-        <p>Welcome to your fresh, lightweight, React App ! &#127752;</p>
-      </div>
-      <div className="rsw-item">
-        <p>
-          Start in the <code>App.jsx</code> component !
-        </p>
-      </div>
-    </main>
+      <div className="bg-purple-600">body</div>
+      <div className="border-green-700">footer</div>
+    </div>
   );
 }
-
 export default App;
