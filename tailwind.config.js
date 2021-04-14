@@ -12,11 +12,11 @@ module.exports = {
 
     extend: {
       gridTemplateRows: {
-        strp: '1fr 4fr 1fr',
+        strp: '0.4fr 2fr 1fr',
       },
 
       gridTemplateColumns: {
-        header: '1fr 3fr',
+        header: '2fr 2fr',
       },
     },
 
