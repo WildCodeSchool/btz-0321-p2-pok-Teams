@@ -20,11 +20,6 @@ module.exports = {
       },
     },
 
-    fontFamily: {
-      display: ['Roboto Mono', 'Menlo', 'monospace'],
-      body: ['Roboto Mono', 'Menlo', 'monospace'],
-    },
-
     variants: {},
 
     plugins: [],
