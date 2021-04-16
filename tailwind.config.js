@@ -15,6 +15,7 @@ module.exports = {
       gridTemplateColumns: {
         PhoneHeaderCol: '2fr 2fr',
         PhoneFooterCol: '0.3fr 1fr 0.2fr',
+        PCHeaderCol: '1fr 3fr',
         PCFooterCol: '1fr 1fr 1fr',
       },
 

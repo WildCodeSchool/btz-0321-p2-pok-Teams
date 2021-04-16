@@ -2,12 +2,12 @@ import React from 'react';
 
 export default function Header() {
   return (
-    <div className="grid grid-cols-PhoneHeaderCol">
+    <div className="grid grid-cols-PhoneHeaderCol pc:grid-cols-PCHeaderCol">
       <div className="logo  flex items-center ml-2">
         <img className="  h-14 pc:h-16" src="src/logo.png" alt="logo"></img>
       </div>
 
-      <div className="MENU inline-flex justify-end mx-8 flex-nowrap text-lg ">
+      <div className="MENU inline-flex justify-end mx-8 flex-nowrap text-base ">
         <div className=" hidden pc:flex mx-8 text-center items-center font-Quantico text-2xl space-x-10">
           <ul>
             <li>how to play</li>
