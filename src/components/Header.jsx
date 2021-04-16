@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Header() {
   return (
-    <div className="header  grid grid-cols-header">
-      <div className="logo  flex items-center">
-        <img src="src/logo.png" alt="logo"></img>
+    <div className="grid grid-cols-PhoneHeaderCol">
+      <div className="logo  flex items-center ml-2">
+        <img className="h-14 pc:h-16" src="src/logo.png" alt="logo"></img>
       </div>
 
       <div className=" inline-flex justify-end mx-8 flex-wrap text-lg lg:w-auto it">
