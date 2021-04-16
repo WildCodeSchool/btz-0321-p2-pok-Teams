@@ -3,20 +3,23 @@ module.exports = {
   darkMode: 'media',
   theme: {
     screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      '2xl': '1536px',
+      pc: '1024px',
     },
 
     extend: {
       gridTemplateRows: {
-        strp: '0.4fr 2fr 1fr',
+        PhoneRows: '0.2fr 1fr 0.8fr',
+        PCRows: '0.1fr 1fr 0.4fr',
       },
 
       gridTemplateColumns: {
-        header: '2fr 2fr',
+        PhoneHeaderCol: '2fr 2fr',
+        PhoneFooterCol: '0.3fr 1fr 0.3fr',
+        PCFooterCol: '1fr 1fr 1fr',
+      },
+
+      fontFamily: {
+        Quantico: ['Quantico', 'sans-serif'],
       },
     },
 
