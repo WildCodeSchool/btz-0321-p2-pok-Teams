@@ -23,30 +23,6 @@ export default function CharacterCreation() {
       </section>
 
       <section className="carouselContainer ">
-        {/* <div className="trainerCarousel flex justify-center flex-col">
-          <div className="carouselPartTrainer flex flex-row">
-            <div className="trainer active">
-              <img src="src/bulbi.png" alt="bulbasaur" />
-            </div>
-            <div className="trainer next">
-              <img src="src/pikachu.png" alt="pikachu" />
-            </div>
-            <div className="trainer">
-              <img src="src/charmander.png" alt="charmander" />
-            </div>
-            <div className="trainer prev">
-              <img src="src/cara.png" alt="squirtle" />
-            </div>
-            <div className="button-container ">
-              <div className="button"></div>
-              <div className="button"></div>
-            </div>
-          </div>
-          <div className="phrase flex justify-center text-center">
-            <p>Choose how you will dress up for this great adventure !</p>
-          </div>
-        </div> */}
-        
         <div className="starterCarousel flex justify-center flex-col">
           <div className="carouselPart flex flex-row">
             <div className="starter active">
@@ -73,7 +49,29 @@ export default function CharacterCreation() {
           </div> */}
         </div>
 
-
+        <div className="trainerCarousel flex justify-center flex-col">
+          <div className="carouselPartTrainer flex flex-row">
+            <div className="trainer active">
+              <img src="src/bulbi.png" alt="bulbasaur" />
+            </div>
+            <div className="trainer next">
+              <img src="src/pikachu.png" alt="pikachu" />
+            </div>
+            <div className="trainer">
+              <img src="src/charmander.png" alt="charmander" />
+            </div>
+            <div className="trainer prev">
+              <img src="src/cara.png" alt="squirtle" />
+            </div>
+            <div className="button-container ">
+              <div className="button"></div>
+              <div className="button"></div>
+            </div>
+          </div>
+          <div className="phrase flex justify-center text-center">
+            <p>Choose how you will dress up for this great adventure !</p>
+          </div>
+        </div>
       </section>
       <div className="flex justify-center">
         <button type="submit" className=" bg-red-600 hover:bg-red-400 font-extrabold py-2 px-8 my-2 rounded-">
