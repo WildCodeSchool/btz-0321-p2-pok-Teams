@@ -8,13 +8,16 @@
 
 .starters {
 display: flex;  
+margin-bottom:   -40px;
 }
 
 .button{
   margin-left: 15px;
   margin-right: 15px;
-  background-color: rgb(238, 24, 24);
+  background-color: rgb(92, 87, 87);
   border-radius: 50%;
+  width: 25px;
+  height: 25px;
 
 }
 
@@ -22,8 +25,6 @@ display: flex;
   display: flex;
   justify-content: center;
 }
-
-
 
 .starterCarousel .starter {
   overflow: hidden;
@@ -34,8 +35,8 @@ display: flex;
 
 .starter img{
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: 200px;
 }
 
 .starter.active {
@@ -47,5 +48,53 @@ display: flex;
 }
 
 .starter.next {
+  opacity: 0.5;
+}
+
+.phrase{
+  padding-bottom: 40px;
+}
+
+/* 
+second part 
+is for 
+Trainer Carousel
+*/
+
+.trainerCarousel {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.trainers {
+display: flex; 
+justify-content: space-around;
+}
+
+.trainerCarousel .trainer {
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+  opacity: 0.5;
+
+}
+
+.trainer img{
+  object-fit: cover;
+  width: 200px;
+  height: 100%;
+}
+
+.trainer.active {
+  opacity: 1;
+}
+
+.trainer.prev {
+  opacity: 0.5;
+}
+
+.trainer.next {
   opacity: 0.5;
 }

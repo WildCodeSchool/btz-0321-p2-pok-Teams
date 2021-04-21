@@ -2,12 +2,11 @@ import React from 'react';
 import AutoType from './AutoType';
 import StarterCarousel from './StarterCarousel';
 import TrainerCarousel from './TrainerCarousel';
-import './carousel.css';
 import ProfOak from '../prof.png';
 
 export default function CharacterCreation() {
   return (
-    <div>
+    <div className="font-Quantico">
       <section className="topPart flex m-2 ">
         <div className="w-1/2">
           <img src={ProfOak} alt="prof Oak" />

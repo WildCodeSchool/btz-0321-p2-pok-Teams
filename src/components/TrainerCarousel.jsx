@@ -1,25 +1,26 @@
 import React from 'react';
+import './carousel.css';
 import Yellow from '../yellow_girl.png';
 import Green from '../green_trainer.png';
 import Red from '../red_trainer.png';
 import Blue from '../blue_girl.png';
 
-const TrainerCarousel = () => {
+function TrainerCarousel() {
   return (
-    <section className="starterCarousel">
+    <section className="trainerCarousel">
       <div className="carouselPart">
-        <div className="starters">
-          <div className="starter active">
-            <img src={Green} />
+        <div className="trainers">
+          <div className="trainer active">
+            <img src={Green} alt="green trainer" />
           </div>
-          <div className="starter next">
-            <img src={Yellow} />
+          <div className="trainer next">
+            <img src={Yellow} alt="yellow trainer" />
           </div>
-          <div className="starter">
-            <img src={Red} />
+          <div className="trainer">
+            <img src={Red} alt="red trainer" />
           </div>
-          <div className="starter prev">
-            <img src={Blue} />
+          <div className="trainer prev">
+            <img src={Blue} alt="blue trainer" />
           </div>
         </div>
         <div className="button-container">
@@ -27,11 +28,11 @@ const TrainerCarousel = () => {
           <div className="button">R</div>
         </div>
       </div>
-      <div className="phrase">
+      <div className="phrase pb-4">
         <p>Choose how you will dress up for this great adventure !</p>
       </div>
     </section>
   );
-};
+}
 
 export default TrainerCarousel;
