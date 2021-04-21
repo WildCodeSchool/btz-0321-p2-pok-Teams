@@ -35,7 +35,7 @@ export default function CharacterCreation() {
       <div className="flex justify-center">
         <button
           type="submit"
-          className=" bg-red-600 hover:bg-red-500 font-extrabold py-2 px-8 my-2 rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md .shadow-2xl ">
+          className=" bg-red-700 hover:bg-red-500 font-extrabold py-2 px-8 my-2 rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md .shadow-2xl ">
           START !
         </button>
       </div>
