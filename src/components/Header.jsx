@@ -11,7 +11,7 @@ export default function Header() {
         <div className=" hidden sm:flex mx-8 text-center items-center ">
           <span>how to play</span>
 
-          <span><a href="src/components/CharacterCreation.jsx">my team </a></span>
+          <span>my team</span>
 
           <span>pokedex</span>
         </div>
