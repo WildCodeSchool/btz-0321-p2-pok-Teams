@@ -1,35 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { TrainerImages } from './TrainerImages';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
 import './carousel.css';
-import Yellow from '../yellow_girl.png';
-import Green from '../green_trainer.png';
-import Red from '../red_trainer.png';
-import Blue from '../blue_girl.png';
 
-function TrainerCarousel() {
+function TrainerCarousel({ slides }) {
+  const [current, setCurrent] = useState(0);
+  const length = slides.length;
+
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
+
   return (
-    <section className="trainerCarousel">
-      <div className="carouselPart">
-        <div className="trainers">
-          <div className="trainer active">
-            <img src={Green} alt="green trainer" />
+    <section className="carousel">
+      {TrainerImages.map((slide, index) => {
+        return (
+          <div className={index === current ? 'slide active' : 'slide'} key={index}>
+            {index === current && <img src={slide.image} alt="some pokemon" className="image" />}
           </div>
-          <div className="trainer next">
-            <img src={Yellow} alt="yellow trainer" />
-          </div>
-          <div className="trainer">
-            <img src={Red} alt="red trainer" />
-          </div>
-          <div className="trainer prev">
-            <img src={Blue} alt="blue trainer" />
-          </div>
-        </div>
-        <div className="button-container">
-          <div className="button">L</div>
-          <div className="button">R</div>
-        </div>
-      </div>
-      <div className="phrase pb-4">
-        <p>Choose how you will dress up for this great adventure !</p>
+        );
+      })}
+      <div className="button-container">
+        <ChevronLeftIcon className="left-arrow" onclick={prevSlide} />
+        <ChevronRightIcon className="right-arrow" onClick={nextSlide} />
       </div>
     </section>
   );

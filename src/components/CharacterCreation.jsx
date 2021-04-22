@@ -3,6 +3,7 @@ import AutoType from './AutoType';
 import StarterCarousel from './StarterCarousel';
 import TrainerCarousel from './TrainerCarousel';
 import CarouselImages from './CarouselImages';
+import TrainerImages from './TrainerImages';
 import ProfOak from '../prof.png';
 import './carousel.css';
 
@@ -31,7 +32,7 @@ export default function CharacterCreation() {
       </div>
 
       <div>
-        <TrainerCarousel />
+        <TrainerCarousel slides={TrainerImages} />
       </div>
 
       <div className="flex justify-center">

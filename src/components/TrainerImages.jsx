@@ -1,4 +1,4 @@
-export const CarouselImages = [
+export const TrainerImages = [
   {
     image: 'https://assets.stickpng.com/images/580b57fcd9996e24bc43c31c.png',
   },
@@ -13,4 +13,4 @@ export const CarouselImages = [
   },
 ];
 
-export default CarouselImages;
+export default TrainerImages;

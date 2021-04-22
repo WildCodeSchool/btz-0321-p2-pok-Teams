@@ -19,9 +19,7 @@ function StarterCarousel({ slides }) {
   }
 
   return (
-    <section className="slider">
-      <ChevronLeftIcon className="left-arrow" onclick={prevSlide} />
-      <ChevronRightIcon className="right-arrow" onClick={nextSlide} />
+    <section className="carousel">
       {CarouselImages.map((slide, index) => {
         return (
           <div className={index === current ? 'slide active' : 'slide'} key={index}>
@@ -29,6 +27,10 @@ function StarterCarousel({ slides }) {
           </div>
         );
       })}
+      <div className="button-container">
+        <ChevronLeftIcon className="left-arrow" onclick={prevSlide} />
+        <ChevronRightIcon className="right-arrow" onClick={nextSlide} />
+      </div>
     </section>
   );
 }
