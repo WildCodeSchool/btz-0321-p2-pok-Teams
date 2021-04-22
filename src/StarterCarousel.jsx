@@ -5,7 +5,7 @@ export default function StarterCarousel() {
     <div className="starterCarousel">
       <section className="carouselPart">
         <div className="starter active">
-          <img src="src/bulbi.png" alt="bulbasaur"/>
+          <img src="src/bulbi.png" alt="bulbasaur" />
         </div>
         <div className="starter next">
           <img src="src/pikachu.png" alt="pikachu" />
@@ -14,7 +14,7 @@ export default function StarterCarousel() {
           <img src="src/charmander.png" alt="charmander" />
         </div>
         <div className="starter prev">
-          <img src="src/cara.png" alt="squirtle"/>
+          <img src="src/cara.png" alt="squirtle" />
         </div>
         <div className="button-container">
           <div className="button"></div>
@@ -23,7 +23,7 @@ export default function StarterCarousel() {
       </section>
       <div className="phrase">
         <p>
-          It's dangerous to go alone ! <br /> Pick your friend.
+          It is dangerous to go alone ! <br /> Pick your friend.
         </p>
       </div>
     </div>

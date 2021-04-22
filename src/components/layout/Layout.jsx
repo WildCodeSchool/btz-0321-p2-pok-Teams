@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from './components/footer';
-import Header from './components/Header';
+import Footer from '../Footer';
+import Header from '../Header';
 import PropTypes from 'prop-types';
 
 function Layout({ children }) {

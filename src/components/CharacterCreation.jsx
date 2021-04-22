@@ -2,7 +2,9 @@ import React from 'react';
 import AutoType from './AutoType';
 import StarterCarousel from './StarterCarousel';
 import TrainerCarousel from './TrainerCarousel';
+import CarouselImages from './CarouselImages';
 import ProfOak from '../prof.png';
+import './carousel.css';
 
 export default function CharacterCreation() {
   return (
@@ -25,7 +27,7 @@ export default function CharacterCreation() {
       </section>
 
       <div>
-        <StarterCarousel />
+        <StarterCarousel slides={CarouselImages} />{' '}
       </div>
 
       <div>
