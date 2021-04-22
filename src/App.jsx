@@ -1,30 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/footer';
-import DisplayEmployee from './components/ApiCall';
+import PokemonList from './components/pokemonList';
 import axios from 'axios';
+import Pagination from './components/pagination';
 
 function App() {
-  const [employee, setEmployee] = useState(null);
+  const [pokemon, setPokemon] = useState([]);
+  const [currentPageUrl, setCurrentPageUrl] = useState('https://pokeapi.co/api/v2/pokemon/');
+  const [nextPageUrl, setNextPageUrl] = useState();
+  const [prevPageUrl, setPrevPageUrl] = useState();
+  const [isLoading, setIsLoading] = useState(true);
 
-  const getEmployee = () => {
-    axios
-      .get('https://randomuser.me/api?nat=en')
-      .then((response) => response.data)
-      .then((data) => {
-        setEmployee(data.results[0]);
-      });
-  };
+  useEffect(() => {
+    axios.get(currentPageUrl).then((res) => {
+      setNextPageUrl(res.data.next);
+      setPrevPageUrl(res.data.previous);
+      setPokemon(res.data.results);
+      setIsLoading(false);
+    });
+  }, []);
+
+  function goNextPage() {
+    setCurrentPageUrl(nextPageUrl);
+  }
+
+  function goPrevPage() {
+    setCurrentPageUrl(prevPageUrl);
+  }
+
   return (
     <div className="grid  grid-rows-PhoneRows w-screen min-h-screen  bg-gradient-to-r from-yellow-300 to-yellow-500 pc:grid-rows-PCRows">
       <Header />
       <div className="bg-gray-400 mt-6 ">
-        Main
-        <button type="button" className="bg-yellow-500" onClick={getEmployee}>
-          Get employee
-        </button>
-        <DisplayEmployee employee={employee} />
+        {!isLoading && <PokemonList pokemon={pokemon} />}
+        <Pagination goNextPage={goNextPage} goPrevPage={goPrevPage} />
       </div>
       <Footer />
     </div>
