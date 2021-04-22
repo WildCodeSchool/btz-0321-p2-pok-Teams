@@ -1,18 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Pokemon from './pokemon';
 
-function PokemonList({ pokemon }) {
-  /* console.log(pokemon);*/
+function PokemonList({ pokemons }) {
+  /* console.log(pokemons);*/
   return (
-    <div className="pokemon">
-      {pokemon.map((pokemon, index) => (
-        <div key={index}>{pokemon.name}</div>
-      ))}
+    <div className="pokemons">
+      {pokemons.map((pokemon, index) => {
+        return <Pokemon key={index} url={pokemon.url} />;
+      })}
+      ;
     </div>
   );
 }
 
 PokemonList.propTypes = {
-  pokemon: PropTypes.any.isRequired,
+  pokemons: PropTypes.array,
 };
 export default PokemonList;

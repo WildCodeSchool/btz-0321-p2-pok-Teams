@@ -6,9 +6,11 @@ import PokemonList from './components/pokemonList';
 import axios from 'axios';
 import Pagination from './components/pagination';
 
+/*const maxId = 151;*/
+
 function App() {
-  const [pokemon, setPokemon] = useState([]);
-  const [currentPageUrl, setCurrentPageUrl] = useState('https://pokeapi.co/api/v2/pokemon/');
+  const [pokemons, setPokemons] = useState([]);
+  const [currentPageUrl, setCurrentPageUrl] = useState('https://pokeapi.co/api/v2/pokemon?limit=151');
   const [nextPageUrl, setNextPageUrl] = useState();
   const [prevPageUrl, setPrevPageUrl] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -17,7 +19,7 @@ function App() {
     axios.get(currentPageUrl).then((res) => {
       setNextPageUrl(res.data.next);
       setPrevPageUrl(res.data.previous);
-      setPokemon(res.data.results);
+      setPokemons(res.data.results);
       setIsLoading(false);
     });
   }, []);
@@ -34,7 +36,7 @@ function App() {
     <div className="grid  grid-rows-PhoneRows w-screen min-h-screen  bg-gradient-to-r from-yellow-300 to-yellow-500 pc:grid-rows-PCRows">
       <Header />
       <div className="bg-gray-400 mt-6 ">
-        {!isLoading && <PokemonList pokemon={pokemon} />}
+        {!isLoading && <PokemonList pokemons={pokemons} />}
         <Pagination goNextPage={goNextPage} goPrevPage={goPrevPage} />
       </div>
       <Footer />

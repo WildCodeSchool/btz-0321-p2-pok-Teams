@@ -10,7 +10,7 @@ module.exports = {
 
     extend: {
       gridTemplateRows: {
-        PhoneRows: '0.2fr 1fr 0.8fr',
+        PhoneRows: '0.1fr 1fr 0.8fr',
         PCRows: '0.1fr 1fr 0.2fr',
       },
 
