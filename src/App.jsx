@@ -33,9 +33,9 @@ function App() {
   }
 
   return (
-    <div className="grid  grid-rows-PhoneRows w-screen min-h-screen  bg-gradient-to-r from-yellow-300 to-yellow-500 pc:grid-rows-PCRows">
+    <div className="grid w-screen min-h-screen  bg-gradient-to-r from-yellow-300 to-yellow-500 ">
       <Header />
-      <div className="bg-gray-400 mt-6 ">
+      <div className=" bg-gray-300 bg-opacity-80 flex  ">
         {!isLoading && <PokemonList pokemons={pokemons} />}
         <Pagination goNextPage={goNextPage} goPrevPage={goPrevPage} />
       </div>

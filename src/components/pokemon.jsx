@@ -22,12 +22,12 @@ function Pokemon({ url }) {
   }, []);
 
   return (
-    <div>
-      <div>
+    <div className="">
+      <div className="flex flex-row flex-wrap justify-center ">
         <h1>{pokemonData.id}</h1>
-        <h1>{pokemonData.name}</h1>
+        <h2>{pokemonData.name}</h2>
         <img alt={pokemonData.name} src={pokemonData.sprites} />
-        <h1>{pokemonData.type}</h1>
+        <p>{pokemonData.type}</p>
         <p>{pokemonData.base_experience}</p>
       </div>
     </div>

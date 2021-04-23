@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <div className="grid grid-cols-PhoneHeaderCol pc:grid-cols-PCHeaderCol">
       <div className="logo  flex items-center ml-2">
-        <img className="  h-14 pc:h-16" src="src/logo.png" alt="logo"></img>
+        <img className=" mt-4 h-14 pc:h-16" src="src/logo.png" alt="logo"></img>
       </div>
 
       <div className="MENU inline-flex justify-end mx-8 flex-nowrap text-base ">
