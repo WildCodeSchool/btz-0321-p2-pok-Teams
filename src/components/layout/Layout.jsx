@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 function Layout({ children }) {
   return (
-    <div className="grid  grid-rows-PhoneRows w-screen min-h-screen  bg-gradient-to-r from-yellow-300 to-yellow-500 pc:grid-rows-PCRows">
+    <div className="grid  w-screen min-h-screen  bg-gradient-to-r from-yellow-300 to-yellow-500 pc:grid-rows-PCRows">
       <Header />
       <div className="bg-yellow-100  m-2">{children}</div>
       <Footer />

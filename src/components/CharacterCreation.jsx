@@ -9,13 +9,13 @@ import './carousel.css';
 
 export default function CharacterCreation() {
   return (
-    <div className="font-Quantico">
-      <section className="topPart flex m-2 ">
-        <div className="w-1/2">
+    <div className="font-Quantico pc:flex pc:flex-col ">
+      <section className="topPart flex pc:justify-center m-2 pb-3 pc:flex pc:pl-20 pc:pr-20 ">
+        <div className="w-1/2 pc:2/5">
           <img src={ProfOak} alt="prof Oak" />
         </div>
-        <div className=" info flex flex-col justify-between w-1/2 bg-gray-400 ">
-          <p className="p-1">
+        <div className=" info flex flex-col justify-between w-1/2 pc:w-2/5 bg-gray-500 rounded-tr-3xl rounded-bl-3xl rounded-tl-md rounded-br-md  ">
+          <p className="pc:p-4 p-1 ">
             <AutoType />
           </p>
           <input
@@ -26,19 +26,13 @@ export default function CharacterCreation() {
           />
         </div>
       </section>
-
-      <div>
-        <StarterCarousel slides={CarouselImages} />{' '}
+      <div className="pc:flex pc:justify-around">
+        <StarterCarousel slides={CarouselImages} /> <TrainerCarousel slides={TrainerImages} />
       </div>
-
-      <div>
-        <TrainerCarousel slides={TrainerImages} />
-      </div>
-
       <div className="flex justify-center pt-2">
         <button
           type="submit"
-          className=" bg-red-700 hover:bg-red-500 font-extrabold py-2 px-8 my-2 rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md .shadow-2xl ">
+          className=" bg-red-700 hover:bg-red-500 font-extrabold py-2 px-8 my-2 pc:w-1/4 pc:p-3 rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md .shadow-inner ">
           START !
         </button>
       </div>
