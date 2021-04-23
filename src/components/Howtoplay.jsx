@@ -1,6 +1,12 @@
 import React from 'react';
 
+
 export default function Howtoplay() {
+  const imgClass="mt-24";
+  const imgClassPc="pc:mt-0 pc:h-8 pc:ml-10 pc:w-1/5 pc:h-auto";  
+  const imgContainer="w-1/5";
+  const imgContainerPc="pc:flex pc:justify-center"
+
   return (
 
     <div className="infos  text-center font-Quantico w-screen">
@@ -16,11 +22,14 @@ export default function Howtoplay() {
                     Your pokémons have many abilities, different types and strengths/weaknesses.
                     It is up to you to figure out the best team configuration to win each battle.
                   </p>
-                  </div>
-    <div>
-          <img className= "mt-24 pc:mt-0 pc:h-8 pc:ml-10"  src="src/Léviator-RFVF.png" alt=""/></div>
-
+          </div>
+    <div className={`${imgContainerPc}`}>
+          <img className={`${imgClass} ${imgClassPc}`}   src="src/Léviator-RFVF.png" alt=""/>
+          </div>
+          <div>
           <p>Catch Em All and make them Battle</p>
+          </div>
+
     </div> 
   );
 }

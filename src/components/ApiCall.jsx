@@ -1,4 +1,4 @@
-/*
+
 import React from 'react';
 
 function DisplayEmployee({ employee }) {
@@ -26,4 +26,4 @@ function DisplayEmployee({ employee }) {
 }
 
 export default DisplayEmployee;
-*/
+
