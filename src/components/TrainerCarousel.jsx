@@ -20,17 +20,20 @@ function TrainerCarousel({ slides }) {
   }
 
   return (
-    <section className="carousel">
+    <section className="carousel flex flex-col justify-center items-center">
       {TrainerImages.map((slide, index) => {
         return (
           <div className={index === current ? 'slide active' : 'slide'} key={index}>
-            {index === current && <img src={slide.image} alt="some pokemon" className="image" />}
+            {index === current && <img src={slide.image} alt="some pokemon" className="image w-40 h-40 mx-1" />}
           </div>
         );
       })}
-      <div className="button-container">
+      <div className="button-container flex">
         <ChevronLeftIcon className="left-arrow" onclick={prevSlide} />
         <ChevronRightIcon className="right-arrow" onClick={nextSlide} />
+      </div>
+      <div className="text-center">
+        <p>Choose how you will dress up for this great adventure !</p>
       </div>
     </section>
   );

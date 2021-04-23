@@ -1,21 +1,6 @@
-.carousel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.image {
-  width: 150px;
-  height: 150px;
-  margin-right: 5px;
-  margin-left: 5px;
-}
-
 .right-arrow {
   width: 5rem;
   height: 5rem;
-  right: 32px;
   font-size: 3rem;
   color: rgb(88, 79, 79);
   z-index: 5;
@@ -25,7 +10,6 @@
 .left-arrow {
   width: 5rem;
   height: 5rem;
-  left: 32px;
   font-size: 3rem;
   color: rgb(88, 79, 79);
   z-index: 5;
