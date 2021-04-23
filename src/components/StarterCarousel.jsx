@@ -28,10 +28,10 @@ function StarterCarousel({ slides }) {
         );
       })}
       <div className="button-container flex">
-        <ChevronLeftIcon className="left-arrow w-20 h-20 text-gray-700 z-10 cursor-pointer select-none text-5xl " onclick={prevSlide} />
+        <ChevronLeftIcon className="left-arrow" onClick={prevSlide} />
         <ChevronRightIcon className="right-arrow" onClick={nextSlide} />
       </div>
-      <div className="text-center">
+      <div className="text-center pb-5">
         <p>It is dangerous to go alone ! Pick your friend.</p>
       </div>
     </section>

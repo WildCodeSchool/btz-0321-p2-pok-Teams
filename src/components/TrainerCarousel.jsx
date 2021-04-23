@@ -29,10 +29,10 @@ function TrainerCarousel({ slides }) {
         );
       })}
       <div className="button-container flex">
-        <ChevronLeftIcon className="left-arrow" onclick={prevSlide} />
+        <ChevronLeftIcon className="left-arrow" onClick={prevSlide} />
         <ChevronRightIcon className="right-arrow" onClick={nextSlide} />
       </div>
-      <div className="text-center">
+      <div className="text-center pb-5">
         <p>Choose how you will dress up for this great adventure !</p>
       </div>
     </section>
