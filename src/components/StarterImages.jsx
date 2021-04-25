@@ -1,10 +1,9 @@
-import React from 'react';
 import Bulbasaur from '../bulbi.png';
 import Charmander from '../charmander.png';
 import Squirtle from '../cara.png';
 import Pikachu from '../pikachu.png';
 
-export const CarouselImages = [
+export const StarterImages = [
   {
     image: Bulbasaur,
   },
@@ -19,4 +18,4 @@ export const CarouselImages = [
   },
 ];
 
-export default CarouselImages;
+export default StarterImages;

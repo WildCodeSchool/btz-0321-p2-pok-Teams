@@ -2,10 +2,11 @@ import React from 'react';
 import AutoType from './AutoType';
 import StarterCarousel from './StarterCarousel';
 import TrainerCarousel from './TrainerCarousel';
-import CarouselImages from './CarouselImages';
+import StarterImages from './StarterImages';
 import TrainerImages from './TrainerImages';
 import ProfOak from '../prof.png';
 import './carousel.css';
+import { Link } from 'react-router-dom';
 
 export default function CharacterCreation() {
   return (
@@ -27,13 +28,13 @@ export default function CharacterCreation() {
         </div>
       </section>
       <div className="pc:flex pc:justify-around">
-        <StarterCarousel slides={CarouselImages} /> <TrainerCarousel slides={TrainerImages} />
+        <StarterCarousel slides={StarterImages} /> <TrainerCarousel slides={TrainerImages} />
       </div>
       <div className="flex justify-center pt-2">
         <button
           type="submit"
           className=" bg-red-700 hover:bg-red-500 font-extrabold py-2 px-8 my-2 pc:w-1/4 pc:p-3 rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md .shadow-inner ">
-          START !
+          <Link to="/">START ! </Link>
         </button>
       </div>
     </div>

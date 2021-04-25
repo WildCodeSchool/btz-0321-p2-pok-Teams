@@ -1,4 +1,3 @@
-import React from 'react';
 import Green from '../green_trainer.png';
 import Yellow from '../yellow_girl.png';
 import Blue from '../blue_girl.png';
