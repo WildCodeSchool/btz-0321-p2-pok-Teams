@@ -15,12 +15,12 @@ export default function CharacterCreation() {
         <div className="w-1/2 pc:2/5">
           <img src={ProfOak} alt="prof Oak" />
         </div>
-        <div className=" info flex flex-col justify-between w-1/2 pc:w-2/5 bg-gray-500 rounded-tr-3xl rounded-bl-3xl rounded-tl-md rounded-br-md  ">
+        <div className=" info flex flex-col justify-between w-1/2 pc:w-2/5 pc:max-h-60 border-4 border-black bg-gray-500 rounded-tr-3xl rounded-bl-3xl rounded-tl-md rounded-br-md  ">
           <p className="pc:p-4 p-1 ">
             <AutoType />
           </p>
           <input
-            className="justify-center w-full pl-1 py-1.5 bg-blue-300 focus:bg-blue-100 text-current border-black border-solid border rounded"
+            className="justify-center w-full pl-1 py-1.5 bg-blue-300 focus:bg-blue-100 text-current border-black rounded-bl-2xl border-solid border rounded"
             type="name"
             placeholder="Enter your name"
             required
