@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { TrainerImages } from './TrainerImages';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
 import './carousel.css';
+import PropTypes from 'prop-types';
 
 function TrainerCarousel({ slides }) {
   const [current, setCurrent] = useState(0);
@@ -38,5 +39,9 @@ function TrainerCarousel({ slides }) {
     </section>
   );
 }
+
+TrainerCarousel.propTypes = {
+  slides: PropTypes.any.isRequired,
+};
 
 export default TrainerCarousel;
