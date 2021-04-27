@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
+import React, { ThemeContext } from 'styled-components';
 
 export default function Howtoplay() {
   const theme = useContext(ThemeContext);
