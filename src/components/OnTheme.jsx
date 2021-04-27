@@ -21,7 +21,7 @@ const Toggle = styled.button`
   transition: all 0.5s ease;
 `;
 
-function Splash({ theme, setTheme }) {
+function OnTheme({ theme, setTheme }) {
   function changeTheme() {
     if (theme === 'light') {
       setTheme('dark');
@@ -35,10 +35,10 @@ function Splash({ theme, setTheme }) {
   return <Toggle onClick={changeTheme}>{icon}</Toggle>;
 }
 
-Splash.propTypes = {
+OnTheme.propTypes = {
   changeTheme: PropTypes.object.isRequired,
   setTheme: PropTypes.string.isRequired,
   theme: PropTypes.string.isRequired,
 };
 
-export default Splash;
+export default OnTheme;

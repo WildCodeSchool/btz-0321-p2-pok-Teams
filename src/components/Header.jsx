@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import Splash from './SplashScreen';
+import OnTheme from './OnTheme';
 
 import Logo from '../img/logo.png';
 
@@ -31,7 +31,7 @@ export default function Header({ theme, setTheme }) {
         <button className="bg-yellow-200 hover:bg-blue-dark text-black font-bold py-1 px-6 rounded hidden pc:block mr-8 mt-2 rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md">
           <Link to="register">Login</Link>
         </button>
-        <Splash theme={theme} setTheme={setTheme} />
+        <OnTheme theme={theme} setTheme={setTheme} />
 
         <div className="flex items-center pc:hidden">
           <button className="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white bg-gray-300 bg-opacity-50">
