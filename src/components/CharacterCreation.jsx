@@ -4,7 +4,7 @@ import StarterCarousel from './StarterCarousel';
 import TrainerCarousel from './TrainerCarousel';
 import StarterImages from './StarterImages';
 import TrainerImages from './TrainerImages';
-import ProfOak from '../prof.png';
+import ProfOak from '../img/prof.png';
 import './carousel.css';
 import { Link } from 'react-router-dom';
 

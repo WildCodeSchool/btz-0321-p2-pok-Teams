@@ -1,7 +1,7 @@
-import Bulbasaur from '../bulbi.png';
-import Charmander from '../charmander.png';
-import Squirtle from '../cara.png';
-import Pikachu from '../cara.png';
+import Bulbasaur from '../img/bulbi.png';
+import Charmander from '../img/charmander.png';
+import Squirtle from '../img/cara.png';
+import Pikachu from '../img/cara.png';
 
 export const StarterImages = [
   {
