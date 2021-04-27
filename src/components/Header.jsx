@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import Splash from './SplashScreen';
 
-import Logo from '../logo.png';
+import Logo from '../img/logo.png';
 
 export default function Header({ theme, setTheme }) {
   return (
