@@ -5,7 +5,7 @@ import Pokemon from './pokemon';
 function PokemonList({ pokemons }) {
   /* console.log(pokemons);*/
   return (
-    <div className="pokemons">
+    <div className="pokemons flex flex-wrap mt-10 ml-5">
       {pokemons.map((pokemon, index) => {
         return <Pokemon key={index} url={pokemon.url} />;
       })}

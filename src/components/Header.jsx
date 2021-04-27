@@ -19,9 +19,9 @@ export default function Header() {
             <li>pokedex</li>
           </ul>
         </div>
+
         <button className="bg-gray-500 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded hidden pc:block mr-8 mt-2">music</button>
         <button className="bg-gray-500 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded hidden pc:block mr-8 mt-2">Login</button>
-        <button className="bg-gray-500 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded hidden pc:block mt-2">Dark mode</button>
 
         <div className="flex items-center pc:hidden">
           <button className="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white bg-gray-300 bg-opacity-50">

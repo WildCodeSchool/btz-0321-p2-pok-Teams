@@ -1,6 +1,6 @@
 module.exports = {
   purge: ['./src/**/*.html', './src/**/*.js', './src/**/*.jsx'],
-  darkMode: 'media',
+  darkMode: 'class',
   theme: {
     screens: {
       xs: '375px',
@@ -21,6 +21,9 @@ module.exports = {
 
       fontFamily: {
         Quantico: ['Quantico', 'sans-serif'],
+      },
+      screens: {
+        dark: { raw: '(prefers-color-scheme: dark)' },
       },
     },
 

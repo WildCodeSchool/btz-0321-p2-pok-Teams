@@ -22,13 +22,17 @@ function Pokemon({ url }) {
   }, []);
 
   return (
-    <div className="">
-      <div className="flex flex-row flex-wrap justify-center ">
-        <h1>{pokemonData.id}</h1>
-        <h2>{pokemonData.name}</h2>
+    <div className="bg-gray-50 border rounded-lg flex flex-col text-g text-center m-1.5">
+      <div className="flex flex-row">
+        <h1 className="font-Quantico font-extrabold">{pokemonData.id}</h1>
+        <h2 className="font-Quantico font-extrabold">{pokemonData.name}</h2>
+      </div>
+      <div>
         <img alt={pokemonData.name} src={pokemonData.sprites} />
-        <p>{pokemonData.type}</p>
-        <p>{pokemonData.base_experience}</p>
+      </div>
+      <div className="flex flex-row justify-between ml-2 mr-2 text-xs">
+        <p className="text-xs  inline-block py-1 px-2 rounded text-lightBlue-600 bg-green-700 uppercase last:mr-0 mr-1">{pokemonData.type}</p>
+        <p>xp{pokemonData.base_experience}</p>
       </div>
     </div>
   );
