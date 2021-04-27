@@ -1,9 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { HiMoon } from 'react-icons/hi';
 import { CgPokemon } from 'react-icons/cg';
-import PropTypes from 'prop-types';
-import Header from './Header';
 
 const Toggle = styled.button`
   cursor: pointer;
@@ -22,44 +21,21 @@ const Toggle = styled.button`
   transition: all 0.5s ease;
 `;
 
-const Page = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  background-color: ${(props) => props.theme.pageBackground};
-  transition: all 0.5s ease;
-`;
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-function Splash(color) {
+function Splash({ theme, setTheme }) {
   function changeTheme() {
-    if (color.theme === 'light') {
-      color.setTheme('dark');
+    if (theme === 'light') {
+      setTheme('dark');
     } else {
-      color.setTheme('light');
+      setTheme('light');
     }
   }
 
-  const icon = color.theme === 'light' ? <HiMoon size={30} /> : <CgPokemon size={40} />;
+  const icon = theme === 'light' ? <HiMoon size={30} /> : <CgPokemon size={40} />;
 
-  return (
-    <Page>
-      <Header />
-      <Container>
-        <Toggle onClick={changeTheme}>{icon}</Toggle>
-      </Container>
-    </Page>
-  );
+  return <Toggle onClick={changeTheme}>{icon}</Toggle>;
 }
 
-Splash.PropTypes = {
+Splash.propTypes = {
   changeTheme: PropTypes.object.isRequired,
   setTheme: PropTypes.string.isRequired,
   theme: PropTypes.string.isRequired,
