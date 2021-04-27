@@ -26,7 +26,7 @@ export default function Howtoplay() {
       <div className={`${imgContainerPc}`}>
       
           <img className={`${imgClassSm} ${imgClassPc} ${imgContainer}`}   src="src/Léviator-RFVF.png" alt=""/>
-          <img className={`${imgClassSm} ${imgClassPc} ${imgContainer}`}   src="src/pikachu.png" alt=""/>
+          <img className={`${imgClassSm} ${imgClassPc} ${imgContainer}`}   src="src/pikachu1.png" alt=""/>
           <img className={`${imgClassSm} ${imgClassPc} ${imgContainer}`}   src="src/evoli.png" alt=""/>
           </div>
 
