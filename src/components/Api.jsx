@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from 'react';
-
 import PokemonList from './components/pokemonList';
 import axios from 'axios';
 import Pagination from './components/pagination';
 
-import './components/carousel.css';
-import './App.css';
+const [pokemons, setPokemons] = useState([]);
+const [currentPageUrl, setCurrentPageUrl] = useState('https://pokeapi.co/api/v2/pokemon?limit=151');
+const [nextPageUrl, setNextPageUrl] = useState();
+const [prevPageUrl, setPrevPageUrl] = useState();
+const [isLoading, setIsLoading] = useState(true);
 
-function App() {
-  const [pokemons, setPokemons] = useState([]);
-  const [currentPageUrl, setCurrentPageUrl] = useState('https://pokeapi.co/api/v2/pokemon?limit=151');
-  const [nextPageUrl, setNextPageUrl] = useState();
-  const [prevPageUrl, setPrevPageUrl] = useState();
-  const [isLoading, setIsLoading] = useState(true);
-
+function Api() {
   useEffect(() => {
     axios.get(currentPageUrl).then((res) => {
       setNextPageUrl(res.data.next);
@@ -32,11 +28,10 @@ function App() {
   }
 
   return (
-    <div className="bg-gray-300 bg-opacity-80 flex">
+    <div className=" bg-gray-300 bg-opacity-80 flex mt-5 ">
       {!isLoading && <PokemonList pokemons={pokemons} />}
       <Pagination goNextPage={goNextPage} goPrevPage={goPrevPage} />
     </div>
   );
 }
-
-export default App;
+export default Api;
