@@ -15,6 +15,6 @@ export default function Pagination({ goNextPage, goPrevPage }) {
 }
 
 Pagination.propTypes = {
-  goNextPage: PropTypes.any.isRequired,
-  goPrevPage: PropTypes.any.isRequired,
+  goNextPage: PropTypes.func.isRequired,
+  goPrevPage: PropTypes.func.isRequired,
 };
