@@ -11,7 +11,7 @@ export default function Header() {
       <div className="MENU inline-flex justify-end mx-8 flex-nowrap text-base ">
         <div className=" hidden pc:flex mx-8 text-center items-center font-Quantico text-2xl space-x-10">
           <ul>
-            <li>how to play</li>
+            <li><Link to="howtoplay">how to play</Link></li>
           </ul>
           <ul>
             <li>my team</li>

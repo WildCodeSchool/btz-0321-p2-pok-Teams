@@ -4,6 +4,7 @@ import App from './App';
 import CharacterCreation from './components/CharacterCreation';
 import HomePage from './components/HomePage';
 import Layout from './components/layout/Layout';
+import Howtoplay from './components/Howtoplay';
 
 function Router() {
   return (
@@ -13,6 +14,7 @@ function Router() {
           <Route exact path="/" component={App} />
           <Route path="/register" component={CharacterCreation} />
           <Route path="/home" component={HomePage} />
+          <Route path="/howtoplay" component={Howtoplay} />
         </Switch>
       </Layout>
     </BrowserRouter>
