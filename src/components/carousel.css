@@ -1,0 +1,29 @@
+.right-arrow {
+  width: 5rem;
+  height: 5rem;
+  font-size: 3rem;
+  color: rgb(88, 79, 79);
+  z-index: 5;
+  cursor: pointer;
+  user-select: none;
+}
+.left-arrow {
+  width: 5rem;
+  height: 5rem;
+  font-size: 3rem;
+  color: rgb(88, 79, 79);
+  z-index: 5;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 1;
+  transition-duration: 0.5s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
