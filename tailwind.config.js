@@ -1,6 +1,6 @@
 module.exports = {
   purge: ['./src/**/*.html', './src/**/*.js', './src/**/*.jsx'],
-  darkMode: 'media',
+  darkMode: 'class',
   theme: {
     screens: {
       xs: '375px',
@@ -10,7 +10,7 @@ module.exports = {
 
     extend: {
       gridTemplateRows: {
-        PhoneRows: '0.2fr 1fr 0.8fr',
+        PhoneRows: '0.1fr 1fr 0.8fr',
         PCRows: '0.1fr 1fr 0.2fr',
       },
 
@@ -21,6 +21,9 @@ module.exports = {
 
       fontFamily: {
         Quantico: ['Quantico', 'sans-serif'],
+      },
+      screens: {
+        dark: { raw: '(prefers-color-scheme: dark)' },
       },
     },
 
