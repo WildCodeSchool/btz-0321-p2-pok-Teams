@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 function HomePage() {
   return (
+
     <div m-0 p-0>
       <img className="absolute z-50" src={Logo} alt="logo" />
       <img className=" absolute bg-cover bg-no-repeat z-40" src={HomeBg} alt="wallpaper" />
