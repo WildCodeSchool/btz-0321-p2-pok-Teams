@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { CarouselImages } from './CarouselImages';
+import { StarterImages } from './StarterImages';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
+import './carousel.css';
+import PropTypes from 'prop-types';
 
 function StarterCarousel({ slides }) {
   const [current, setCurrent] = useState(0);
@@ -20,7 +22,7 @@ function StarterCarousel({ slides }) {
 
   return (
     <section className="carousel carousel flex flex-col justify-center items-center">
-      {CarouselImages.map((slide, index) => {
+      {StarterImages.map((slide, index) => {
         return (
           <div className={index === current ? 'slide active' : 'slide'} key={index}>
             {index === current && <img src={slide.image} alt="some pokemon" className="image w-40 h-40 mx-1" />}
@@ -37,5 +39,9 @@ function StarterCarousel({ slides }) {
     </section>
   );
 }
+
+StarterCarousel.propTypes = {
+  slides: PropTypes.any.isRequired,
+};
 
 export default StarterCarousel;
