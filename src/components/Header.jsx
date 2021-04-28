@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import OnTheme from './OnTheme';
 
-import Logo from '../img/logo.png';
+import Logo from './img/logo.png';
 
 export default function Header({ theme, setTheme }) {
   return (
@@ -27,15 +27,18 @@ export default function Header({ theme, setTheme }) {
             </li>
           </ul>
           <ul>
-            <li>pokedex</li>
+            <Link to="Pokedex">
+              <li>pokedex</li>
+            </Link>
           </ul>
         </div>
         <button className="bg-gray-500 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded hidden pc:block mr-8 mt-2 ">music</button>
         <button className="bg-yellow-200 hover:bg-blue-dark text-black font-bold py-1 px-6 rounded hidden pc:block mr-8 mt-2 rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md">
           <Link to="register">Login</Link>
         </button>
-        <OnTheme theme={theme} setTheme={setTheme} />
-
+        <div className="flex items-center py-2 mr-5">
+          <OnTheme theme={theme} setTheme={setTheme} />
+        </div>
         <div className="flex items-center pc:hidden">
           <button className="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white bg-gray-300 bg-opacity-50">
             <svg className="h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

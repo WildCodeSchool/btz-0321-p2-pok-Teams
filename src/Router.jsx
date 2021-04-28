@@ -6,6 +6,7 @@ import CharacterCreation from './components/CharacterCreation';
 import HomePage from './components/HomePage';
 import Layout from './components/layout/Layout';
 import Howtoplay from './components/Howtoplay';
+import Pokedex from './components/Pokedex';
 import MyTeam from './components/MyTeam';
 
 function LayoutedRoute({ layout: Layout, component: Component, ...rest }) {
@@ -36,6 +37,7 @@ function Router() {
         <LayoutedRoute path="/register" layout={Layout} component={CharacterCreation} />
         <LayoutedRoute path="/app" layout={Layout} component={App} />
         <LayoutedRoute path="/howtoplay" layout={Layout} component={Howtoplay} />
+        <LayoutedRoute path="/Pokedex" layout={Layout} component={Pokedex} />
         <LayoutedRoute path="/myteam" layout={Layout} component={MyTeam} />
       </Switch>
     </BrowserRouter>
