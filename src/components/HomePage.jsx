@@ -1,6 +1,6 @@
 import React from 'react';
-import HomeBg from '../img/homeBg.png';
-import Logo from '../img/logo.png';
+import HomeBg from './img/homeBg.png';
+import Logo from './img/logo.png';
 import { Link } from 'react-router-dom';
 
 function HomePage() {
