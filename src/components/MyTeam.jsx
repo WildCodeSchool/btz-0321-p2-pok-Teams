@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Green from '../img/green_trainer.png';
+import Green from './img/green_trainer.png';
 
 function MyTeam() {
   return (

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import Pokeball from '../img/pokeball.png';
-import Facebook from '../img/facebook.png';
-import Instagram from '../img/insta.png';
-import Twitter from '../img/twitter.png';
-import Linkedin from '../img/linkedin.png';
-import Github from '../img/github.png';
-import Youtube from '../img/youtube.png';
-import Copyright from '../img/copyright.png';
+import Pokeball from './img/pokeball.png';
+import Facebook from './img/facebook.png';
+import Instagram from './img/insta.png';
+import Twitter from './img/twitter.png';
+import Linkedin from './img/linkedin.png';
+import Github from './img/github.png';
+import Youtube from './img/youtube.png';
+import Copyright from './img/copyright.png';
 
 export default function Footer() {
   const [companies] = useState([
