@@ -21,7 +21,10 @@ export default function Header({ theme, setTheme }) {
             </li>
           </ul>
           <ul>
-            <li>my team</li>
+            <li>
+              {' '}
+              <Link to="myteam">my team</Link>
+            </li>
           </ul>
           <ul>
             <Link to="Pokedex">

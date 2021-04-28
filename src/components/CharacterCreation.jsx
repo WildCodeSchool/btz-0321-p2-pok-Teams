@@ -34,7 +34,7 @@ export default function CharacterCreation() {
         <button
           type="submit"
           className=" bg-red-700 hover:bg-red-500 font-extrabold py-2 px-8 my-2 pc:w-1/4 pc:p-3 rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md .shadow-inner ">
-          <Link to="/">START ! </Link>
+          <Link to="myteam">START ! </Link>
         </button>
       </div>
     </div>
