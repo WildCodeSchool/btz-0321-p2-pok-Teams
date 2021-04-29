@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 const sentences = [
   'Welcome to the Pokemon Encyclopedia ! Find here all your discovered Pokemons and see their properties.',
   'Try to sort the Pokemons by his type and watch the list change.',
+  'You can see more informations by clicking on the pokemon you like.',
 ];
 
 export default function TypePokedex() {

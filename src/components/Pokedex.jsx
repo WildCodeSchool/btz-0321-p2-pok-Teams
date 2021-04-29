@@ -4,6 +4,7 @@ import TypePokedex from './TypePokedex';
 import pokedex from './img/pokedex.png';
 import PokemonList from './pokemonList';
 import Pagination from './pagination';
+import Selector from './Selector';
 
 export default function Pokedex() {
   const [pokemons, setPokemons] = useState([]);
@@ -39,7 +40,10 @@ export default function Pokedex() {
           </p>
         </div>
       </div>
-      <div className="pokemon list">
+      <div className="flex flex-row justify-end mr-10">
+        <Selector />
+      </div>
+      <div className="pokemon list xs:flex-col xs:flex  xs:justify-center">
         {!isLoading && <PokemonList pokemons={pokemons} />}
         <Pagination goNextPage={goNextPage} goPrevPage={goPrevPage} />
       </div>
