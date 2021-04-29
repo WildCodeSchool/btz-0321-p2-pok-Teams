@@ -25,7 +25,7 @@ function StarterCarousel({ slides }) {
       {StarterImages.map((slide, index) => {
         return (
           <div className={index === current ? 'slide active' : 'slide'} key={index}>
-            {index === current && <img src={slide.image} alt="some pokemon" className="image w-40 h-40 mx-1" />}
+            {index === current && <img src={slide.image} alt="some pokemon" className="image w-80 h-80 -m-20 mx-1" />}
           </div>
         );
       })}

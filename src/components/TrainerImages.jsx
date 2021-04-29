@@ -1,7 +1,7 @@
-import Green from './img/green_trainer.png';
-import Yellow from './img/yellow_girl.png';
-import Blue from './img/blue_girl.png';
-import Red from './img/red_trainer.png';
+import Green from './img/greent.png';
+import Yellow from './img/yellowt.png';
+import Blue from './img/bluet.png';
+import Red from './img/redt.png';
 
 export const TrainerImages = [
   {
