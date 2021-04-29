@@ -32,7 +32,7 @@ export default function Header({ theme, setTheme }) {
             </Link>
           </ul>
         </div>
-        <button className="bg-gray-500 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded hidden pc:block mr-8 mt-2 ">music</button>
+        <button className="bg-gray-500 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded hidden pc:block mr-8 mt-2 shadow-2xl ">music</button>
         <button className="bg-yellow-200 hover:bg-blue-dark text-black font-bold py-1 px-6 rounded hidden pc:block mr-8 mt-2 rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md shadow-2xl">
           <Link to="register">Login</Link>
         </button>

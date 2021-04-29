@@ -23,7 +23,11 @@ function MyTeam() {
   if (error) return 'ERROR !!!' + error.message;
 
   return data.results.map((pkm) => {
-    return <MyCollection key={pkm.url} {...pkm} />;
+    return (
+      <div className="flex flex-row ">
+        <MyCollection key={pkm.url} {...pkm} />
+      </div>
+    );
   });
 }
 
