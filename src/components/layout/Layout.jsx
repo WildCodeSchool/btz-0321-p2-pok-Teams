@@ -45,7 +45,7 @@ function Layout({ children }) {
   );
 }
 Layout.propTypes = {
-  children: PropTypes.any.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

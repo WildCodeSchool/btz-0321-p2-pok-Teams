@@ -15,7 +15,7 @@ export default function CharacterCreation() {
         <div className="w-1/2 pc:2/5">
           <img src={ProfOak} alt="prof Oak" />
         </div>
-        <div className=" info flex flex-col justify-between w-1/2 pc:w-2/5 pc:max-h-60 border-4 border-black bg-gray-500 rounded-tr-3xl rounded-bl-3xl rounded-tl-md rounded-br-md  ">
+        <div className=" info flex flex-col justify-between w-1/2 pc:w-2/5 pc:max-h-60 border-4 border-black bg-gray-500 rounded-tr-3xl rounded-bl-3xl rounded-tl-md rounded-br-md shadow-2xl">
           <p className="pc:p-4 p-1 ">
             <AutoType />
           </p>
@@ -27,13 +27,13 @@ export default function CharacterCreation() {
           />
         </div>
       </section>
-      <div className="pc:flex pc:justify-around">
+      <div className="pc:flex pc:justify-around ">
         <StarterCarousel slides={StarterImages} /> <TrainerCarousel slides={TrainerImages} />
       </div>
       <div className="flex justify-center pt-2">
         <button
           type="submit"
-          className=" bg-red-700 hover:bg-red-500 font-extrabold py-2 px-8 my-2 pc:w-1/4 pc:p-3 rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md .shadow-inner ">
+          className=" bg-red-700 hover:bg-red-500 font-extrabold py-2 px-8 my-2 pc:w-1/4 pc:p-3 rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md shadow-2xl">
           <Link to="myteam">START ! </Link>
         </button>
       </div>
