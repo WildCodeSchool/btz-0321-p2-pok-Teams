@@ -15,11 +15,11 @@ const Toggle = styled.button`
   align-items: center;
   background-color: ${(props) => props.theme.bulleColor};
   color: ${(props) => props.theme.pageBackground};
+  margin-right: 10px;
+  transition: all 0.5s ease;
   &:focus {
     outline: none;
   }
-
-  transition: all 0.5s ease;
 `;
 
 function OnTheme({ theme, setTheme }) {
