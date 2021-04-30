@@ -13,7 +13,7 @@ const LightTheme = {
 };
 
 const DarkTheme = {
-  pageBackground: 'bg-gray-700 dark:text-gray-300',
+  pageBackground: 'bg-gray-800 dark:text-gray-300',
   bulleColor: '#b91c1c',
   tagLineColor: 'lavender',
 };
@@ -38,7 +38,9 @@ function Layout({ children }) {
     <ThemeProvider theme={themes[theme]}>
       <div id="layout" className={`grid w-screen min-h-screen pc:grid-rows-PCRows ${themes[theme].pageBackground}`}>
         <Header theme={theme} setTheme={setTheme} />
-        <div className="bg-yellow-100 bg-opacity-70 m-2  ">{children}</div>
+        <div className="bg-yellow-100 bg-opacity-30 m-2" theme={theme}>
+          {children}
+        </div>
         <Footer />
       </div>
     </ThemeProvider>
