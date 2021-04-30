@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function BurguerMenu() {
   return (
-    <div className="flex">
-      <div className="block pc:hidden">
+    <div className="inline-block ">
+      <div className="pc:hidden">
         <button
           id="nav-toggle"
           className="flex items-center focus:outline-none px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white bg-gray-300 bg-opacity-50">
@@ -14,10 +14,10 @@ export default function BurguerMenu() {
         </button>
       </div>
 
-      <div className="w-full flex-grow pc:flex pc:items-center pc:w-auto hidden pt-6 pc:pt-0" id="nav-content">
-        <ul className="list-reset pc:flex justify-end flex-1 items-center">
+      <div className="absolute transform -translate-x-16  pc:flex pc:items-center bg-yellow-500 hidden pt-6" id="nav-content">
+        <ul className=" flex-1 items-center">
           <li className="mr-3">
-            <a className="inline-block py-2 px-4 text-white no-underline" href="howtoplay">
+            <a className="inline-block  px-4 text-white no-underline" href="howtoplay">
               How to play
             </a>
           </li>

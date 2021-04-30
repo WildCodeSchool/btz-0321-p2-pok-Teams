@@ -38,7 +38,7 @@ function Layout({ children }) {
     <ThemeProvider theme={themes[theme]}>
       <div id="layout" className={`grid w-screen min-h-screen pc:grid-rows-PCRows ${themes[theme].pageBackground}`}>
         <Header theme={theme} setTheme={setTheme} />
-        <div className="bg-yellow-100 bg-opacity-70 m-2 ">{children}</div>
+        <div className="bg-yellow-100 bg-opacity-70 m-2  ">{children}</div>
         <Footer />
       </div>
     </ThemeProvider>
