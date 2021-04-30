@@ -1,23 +1,31 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+import MyCollection from './MyCollection';
 
-import Green from './img/green_trainer.png';
+const queryClient = new QueryClient();
 
-function MyTeam() {
+export default function App() {
   return (
-    <div className="container font-Quantico">
-      <div className="flex text-4xl font-extrabold py-5">
-        <img src={Green} alt="green trainer" className="px-5  " />
-        <h1 className="px-3">Player X Team</h1>
-      </div>
-      <div>
-        <h2 className="text-3xl my-5 px-5">My Team</h2>
-      </div>
-      <div className="pc:flex pc:justify-between my-5 px-5">
-        <h2 className="text-3xl">My Collection</h2>
-        <h2 className=" text-2xl">current team 5/6</h2>
-      </div>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <MyTeam />
+      <ReactQueryDevtools />
+    </QueryClientProvider>
   );
 }
 
-export default MyTeam;
+function MyTeam() {
+  const { isLoading, error, data } = useQuery('repoData', () => fetch('https://pokeapi.co/api/v2/pokemon/?limit=10').then((res) => res.json()));
+
+  if (isLoading) return 'Loading...';
+
+  if (error) return 'ERROR !!!' + error.message;
+
+  return data.results.map((pkm) => {
+    return <MyCollection key={pkm.url} {...pkm} />;
+  });
+}
+
+const rootElement = document.getElementById('root');
+ReactDOM.render(<App />, rootElement);
