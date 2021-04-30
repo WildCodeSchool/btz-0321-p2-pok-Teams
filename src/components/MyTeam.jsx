@@ -16,7 +16,7 @@ export default function App() {
 }
 
 function MyTeam() {
-  const { isLoading, error, data } = useQuery('repoData', () => fetch('https://pokeapi.co/api/v2/pokemon/?limit=10').then((res) => res.json()));
+  const { isLoading, error, data } = useQuery('repoData', () => fetch('https://pokeapi.co/api/v2/pokemon/?limit=40').then((res) => res.json()));
 
   if (isLoading) return 'Loading...';
 

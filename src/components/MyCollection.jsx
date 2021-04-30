@@ -10,9 +10,9 @@ export default function MyCollection({ url, name }) {
   if (error) return 'ERROR !!!' + error.message;
 
   return (
-    <div className="flex flex-row font-Quantico ">
-      <div className="flex flex-wrap">
-        <div className="bg-gray-50 w-40 border-2 border-blue-300 rounded-lg flex flex-col text-g text-center m-1.5 shadow-2xl ">
+    <div className="flex flex-col align-center justify-center font-Quantico ">
+      <div className="">
+        <div className="bg-gray-50 w-40 border-2 border-blue-300 rounded-lg flex flex-col text-g text-center m-1.5 shadow-2xl mx-3 my-2 ">
           <div className="flex justify-around bg-blue-200">
             <h2 className="text-lg">{data.name}</h2>
             <p className=" text-lg  "> {data.id}</p>
@@ -23,6 +23,7 @@ export default function MyCollection({ url, name }) {
             <p className="text-yellow-500">{data.base_experience} xp </p>
           </div>
         </div>
+        <button className="bg-blue-600 border-2 border-black rounded w-10/12 shadow-2xl ml-4">add to team</button>
       </div>
     </div>
   );
