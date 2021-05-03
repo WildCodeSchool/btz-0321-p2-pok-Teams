@@ -17,7 +17,7 @@ export default function Header({ theme, setTheme }) {
         <div className="block  mr-5 pc:hidden ">
           <BurguerMenu />
         </div>
-        <div className=" hidden pc:flex text-center items-center font-Quantico text-2xl space-x-10">
+        <div className="hidden pc:flex text-center items-center font-Quantico text-2xl space-x-10">
           <ul>
             <li>
               <Link to="howtoplay">how to play</Link>
