@@ -8,7 +8,7 @@ import Logo from '../img/logo.png';
 
 export default function Header({ theme, setTheme }) {
   return (
-    <div id="header" className="grid grid-cols-PhoneHeaderCol pc:grid-cols-PCHeaderCol">
+    <div id="header" className="grid grid-cols-PhoneHeaderCol pc:grid-cols-PCHeaderCol w-full">
       <div className="logo flex items-center ml-2">
         <img className="mt-4 h-14 pc:h-16" src={Logo} alt="logo" />
       </div>

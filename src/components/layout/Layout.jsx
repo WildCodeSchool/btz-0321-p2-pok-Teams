@@ -9,7 +9,7 @@ const LightTheme = {
   pageBackground: 'bg-gradient-to-r from-yellow-300 to-yellow-500 dark:text-gray-300',
   titleColor: '#dc658b',
   tagLineColor: 'black',
-  textColor: 'text-pink-400',
+  textColor: 'black',
 };
 
 const DarkTheme = {
