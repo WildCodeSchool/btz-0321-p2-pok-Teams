@@ -22,17 +22,19 @@ function Pokemon({ url }) {
   }, []);
 
   return (
-    <div className="bg-gray-50 border rounded-lg flex flex-col text-g text-center m-1.5">
-      <div className="flex flex-row">
-        <h1 className="font-Quantico font-extrabold">{pokemonData.id}</h1>
-        <h2 className="font-Quantico font-extrabold">{pokemonData.name}</h2>
-      </div>
-      <div>
-        <img alt={pokemonData.name} src={pokemonData.sprites} />
-      </div>
-      <div className="flex flex-row justify-between ml-2 mr-2 text-xs">
-        <p className="text-xs  inline-block py-1 px-2 rounded text-lightBlue-600 bg-green-700 uppercase last:mr-0 mr-1">{pokemonData.type}</p>
-        <p>xp{pokemonData.base_experience}</p>
+    <div className="flex flex-col align-center justify-center font-Quantico ">
+      <div className="">
+        <div className="bg-gray-50 w-40 border-2 border-blue-300 rounded-lg flex flex-col text-g text-center m-1.5 shadow-2xl mx-3 my-2 ">
+          <div className="flex justify-around bg-blue-200">
+            <h2 className="text-lg">{pokemonData.name}</h2>
+            <p className=" text-lg  "> {pokemonData.id}</p>
+          </div>
+          <img className="flex justify-center " src={pokemonData.sprites} alt={pokemonData.name} />
+          <div className="flex justify-around bg-blue-200 ">
+            <p>{pokemonData.type}</p>
+            <p className="text-yellow-500">{pokemonData.base_experience} xp </p>
+          </div>
+        </div>
       </div>
     </div>
   );
