@@ -6,15 +6,15 @@ import Footer from '../Footer';
 import Header from '../Header';
 
 const LightTheme = {
-  pageBackground: 'bg-gradient-to-r from-yellow-300 to-yellow-500 dark:text-gray-300',
-  titleColor: '#dc658b',
+  pageBackground: 'bg-gradient-to-r from-yellow-300 to-yellow-500 ',
+  bulleColor: '#3660a7',
   tagLineColor: 'black',
-  textColor: 'black',
+  textColor: 'text-black',
 };
 
 const DarkTheme = {
-  pageBackground: 'bg-gray-700',
-  titleColor: 'lightpink',
+  pageBackground: 'bg-gray-800 dark:text-gray-300',
+  bulleColor: '#b91c1c',
   tagLineColor: 'lavender',
 };
 
@@ -38,14 +38,16 @@ function Layout({ children }) {
     <ThemeProvider theme={themes[theme]}>
       <div id="layout" className={`grid w-screen min-h-screen pc:grid-rows-PCRows ${themes[theme].pageBackground}`}>
         <Header theme={theme} setTheme={setTheme} />
-        <div className="bg-yellow-100 m-2">{children}</div>
+        <div className="bg-yellow-100 bg-opacity-30 m-2" theme={theme}>
+          {children}
+        </div>
         <Footer />
       </div>
     </ThemeProvider>
   );
 }
 Layout.propTypes = {
-  children: PropTypes.any.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

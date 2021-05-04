@@ -13,12 +13,13 @@ const Toggle = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.theme.titleColor};
+  background-color: ${(props) => props.theme.bulleColor};
   color: ${(props) => props.theme.pageBackground};
+  margin-right: 10px;
+  transition: all 0.5s ease;
   &:focus {
     outline: none;
   }
-  transition: all 0.5s ease;
 `;
 
 function OnTheme({ theme, setTheme }) {
