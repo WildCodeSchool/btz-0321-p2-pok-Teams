@@ -1,9 +1,10 @@
 
 import React, { useContext } from 'react';
 import  { ThemeContext } from 'styled-components';
-import imgLeviator from '../img/Leviator.png';
-import imgPikachu1 from '../img/pikachu1.png';
-import imgEvoli from '../img/evoli.png';
+import imgLeviator from './img/leviator.png';
+import imgPika from './img/pika.png';
+import imgEvoli from './img/evoli.png';
+
 
 export default function Howtoplay() {
   const theme = useContext(ThemeContext);
@@ -30,7 +31,7 @@ export default function Howtoplay() {
       
       <div className={`imgcontainer ${imgContainer} ${imgContainerPc}`}>
         <img className={`pokeimg ${imgClass} ${imgClassSm} ${imgClassPc}`} src={imgLeviator} alt="" />
-        <img className={`pokeimg ${imgClass} ${imgClassSm} ${imgClassPc}`} src={imgPikachu1} alt="" />
+        <img className={`pokeimg ${imgClass} ${imgClassSm} ${imgClassPc}`} src={imgPika} alt="" />
         <img className={`pokeimg ${imgClass} ${imgClassSm} ${imgClassPc}`} src={imgEvoli} alt="" />
       </div>
 
