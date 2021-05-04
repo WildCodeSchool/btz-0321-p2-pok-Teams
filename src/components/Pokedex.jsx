@@ -40,7 +40,7 @@ export default function Pokedex() {
           </p>
         </div>
       </div>
-      <div className="flex flex-row justify-end mr-10">
+      <div className="mt-5 flex flex-row justify-end mr-10">
         <Selector />
       </div>
       <div className="pokemon list xs:flex-col xs:flex  xs:justify-center">
