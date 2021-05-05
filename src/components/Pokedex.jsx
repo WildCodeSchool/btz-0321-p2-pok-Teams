@@ -3,32 +3,39 @@ import axios from 'axios';
 import TypePokedex from './TypePokedex';
 import pokedex from './img/pokedex.png';
 import PokemonList from './pokemonList';
-import Pagination from './pagination';
+
 import Selector from './Selector';
 
 export default function Pokedex() {
   const [pokemons, setPokemons] = useState([]);
-  const [currentPageUrl, setCurrentPageUrl] = useState('https://pokeapi.co/api/v2/pokemon?limit=151');
-  const [nextPageUrl, setNextPageUrl] = useState();
-  const [prevPageUrl, setPrevPageUrl] = useState();
+  const [types, setTypes] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    axios.get(currentPageUrl).then((res) => {
-      setNextPageUrl(res.data.next);
-      setPrevPageUrl(res.data.previous);
-      setPokemons(res.data.results);
+    const getPokemonsAndTypes = async () => {
+      setIsLoading(true);
+      const [typesRes, pokemonsRes] = await Promise.all([
+        axios.get('https://pokeapi.co/api/v2/type'),
+        axios.get('https://pokeapi.co/api/v2/pokemon?limit=151'),
+      ]);
+
+      const typesData = typesRes.data.results;
+      const pokemonsData = pokemonsRes.data.results;
+
+      setPokemons(pokemonsData);
+      setTypes(typesData);
       setIsLoading(false);
-    });
+    };
+
+    getPokemonsAndTypes();
   }, []);
 
-  function goNextPage() {
-    setCurrentPageUrl(nextPageUrl);
-  }
+  const handleChange = (e) => {
+    e.preventDefault();
 
-  function goPrevPage() {
-    setCurrentPageUrl(prevPageUrl);
-  }
+    setFilter(e.target.value);
+  };
 
   return (
     <div className="flex flex-col mt-9">
@@ -41,12 +48,9 @@ export default function Pokedex() {
         </div>
       </div>
       <div className="mt-5 flex flex-row justify-end mr-10">
-        <Selector />
+        <Selector types={types} handleChange={handleChange} />
       </div>
-      <div className="pokemon list xs:flex-col xs:flex  xs:justify-center">
-        {!isLoading && <PokemonList pokemons={pokemons} />}
-        <Pagination goNextPage={goNextPage} goPrevPage={goPrevPage} />
-      </div>
+      <div className="pokemon list xs:flex-col xs:flex  xs:justify-center">{!isLoading && <PokemonList filter={filter} pokemons={pokemons} />}</div>
     </div>
   );
 }

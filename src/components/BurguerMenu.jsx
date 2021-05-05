@@ -9,7 +9,6 @@ export default function BurguerMenu() {
       <div className="pc:hidden">
         <button
           id="nav-toggle"
-          show={show}
           onClick={() => setShow(!show)}
           className="flex items-center focus:outline-none px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white bg-gray-300 bg-opacity-50">
           <svg className="fill-current h-4 w-4 bg-teal-light" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -43,5 +42,6 @@ export default function BurguerMenu() {
 }
 
 BurguerMenu.propTypes = {
-  setShow: PropTypes.func.isRequired,
+  setShow: PropTypes.func,
+  Show: PropTypes.func,
 };

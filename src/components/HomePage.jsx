@@ -6,12 +6,9 @@ import Formulaire from './Form';
 
 function HomePage() {
   return (
-    <div className=" w-full h-full bg-no-repeat bg-cover" style={{ backgroundImage: `url(${HomeBg})` }}>
-      <div className="flex flex-col items-center  py-52">
-        <img className=" w-10/12 pc:w-1/2 " src={Logo} alt="logo" />
-
-        <Formulaire />
-      </div>
+    <div className="flex flex-col items-center   bg-no-repeat h-screen bg-cover bg-center" style={{ backgroundImage: `url(${HomeBg})` }}>
+      <img className="pc:h-1/4 pc:mt-28 mt-32 " src={Logo} alt="logo" />
+      <Formulaire />
     </div>
   );
 }
