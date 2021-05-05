@@ -1,20 +1,25 @@
-// import React from 'react';
-// import Music from '../milkbar.mp3';
-// import { VolumeUpIcon } from '@heroicons/react/solid';
-// import { Howl } from 'howler';
+import React from 'react';
+import Music from '../milkbar.mp3';
+import { VolumeUpIcon } from '@heroicons/react/solid';
 
-// const MusicButton = new Howl({
-//   src: [Music],
-// });
+function MusicButton() {
+  const audio = new Audio(Music);
 
-// function MusicButton() {
-//   return (
-//     <button
-//       onClick={Music.play() ? Music.pause() : Music.play()}
-//       className="bg-gray-500 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded hidden pc:block mr-8 mt-2 ">
-//       <VolumeUpIcon className="w-4 h-4" />
-//     </button>
-//   );
-// }
+  const toggleMusic = () => {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  };
 
-// export default MusicButton;
+  return (
+    <button
+      onClick={toggleMusic}
+      className="bg-yellow-200 hover:bg-blue-dark text-white font-bold ml-4 py-2 px-2 rounded rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md  hidden pc:block mr-8 mt-2 shadow-2xl ">
+      <VolumeUpIcon className="text-black h-10 w-10" />
+    </button>
+  );
+}
+
+export default MusicButton;
