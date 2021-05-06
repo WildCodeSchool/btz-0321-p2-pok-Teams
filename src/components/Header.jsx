@@ -8,9 +8,11 @@ import MusicButton from './MusicButton';
 
 export default function Header({ theme, setTheme }) {
   return (
-    <div id="header" className="grid grid-cols-PhoneHeaderCol pc:grid-cols-PCHeaderCol w-full">
-      <div className="logo flex items-center ml-2">
-        <img className="mt-4 h-14 pc:h-16" src={Logo} alt="logo" />
+    <nav className=" items-center justify-between flex  p-3 w-full z-10 top-0">
+      <div className="logo flex  place-items-start ">
+        <Link to="/">
+          <img className="h-14 pc:h-16" src={Logo} alt="logo" />
+        </Link>
       </div>
 
       <div className="MENU PC  inline-flex ">
@@ -32,6 +34,11 @@ export default function Header({ theme, setTheme }) {
             <Link to="Pokedex">
               <li>pokedex</li>
             </Link>
+            </ul>
+            <ul>
+            <Link to="WorldMap">
+              <li>World Map</li>
+            </Link>
           </ul>
         </div>
         <MusicButton />
@@ -42,11 +49,11 @@ export default function Header({ theme, setTheme }) {
           <OnTheme theme={theme} setTheme={setTheme} />
         </div>
       </div>
-    </div>
-  )};
+    </nav>
+  );
+}
 
-
-Header.propTypes = { 
+Header.propTypes = {
   theme: PropTypes.string,
   setTheme: PropTypes.func,
 };

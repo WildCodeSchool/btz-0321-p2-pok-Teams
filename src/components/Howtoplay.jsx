@@ -6,6 +6,7 @@ import imgPika from './img/pika.png';
 import imgEvoli from './img/evoli.png';
 
 
+
 export default function Howtoplay() {
   const theme = useContext(ThemeContext);
 
@@ -16,11 +17,11 @@ export default function Howtoplay() {
   const imgClass = 'flex justify-center bg-yellow-50 h-auto px-4 w-auto border-4 border-black border-radius rounded-lg m-1';
   const imgClassSm ='m-3';
   const imgClassPc = 'pc:mt-0 pc:ml-10 pc:w-1/5 pc:h-auto';
-  const catchMeAll = 'm-12 bg-gray-500 rounded-tr-3xl rounded-bl-3xl rounded-tl-md rounded-br-md';
+  const catchMeAll = 'm-12 border-4 border-black shadow-2xl bg-gray-500 rounded-tr-3xl rounded-bl-3xl rounded-tl-md rounded-br-md';
 
   return (
     <div className="infos  text-center md:text-center font-Quantico w-50 px-16 ">
-      <div className="bg-gray-500 rounded-tr-3xl rounded-bl-3xl rounded-tl-md rounded-br-md m-4 ">
+      <div className="border-4 border-black shadow-2xl bg-gray-500 rounded-tr-3xl rounded-bl-3xl rounded-tl-md rounded-br-md m-4 ">
         <p className={`${theme.textColor}`}>
           Welcome Trainer, You are about to start a great adventure, but your path is full of pitfalls ! Luckily, your pokémon friends are here to
           help. Select a destination on your map and battle trainers to clear your way through glory ! Victories might also reward you with new
@@ -36,7 +37,7 @@ export default function Howtoplay() {
       </div>
 
       <div className={`${catchMeAll}`}>
-        <div className="border-black bg-gray-500 rounded-tr-3xl rounded-bl-3xl rounded-tl-md rounded-br-md m-3 ">
+        <div className=" bg-gray-500 rounded-tr-3xl rounded-bl-3xl rounded-tl-md rounded-br-md m-3 ">
           <p>Catch Em All and make them Battle</p>
         </div>
       </div>
