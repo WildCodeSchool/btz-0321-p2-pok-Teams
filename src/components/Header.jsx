@@ -10,7 +10,9 @@ export default function Header({ theme, setTheme }) {
   return (
     <nav className=" items-center justify-between flex  p-3 w-full z-10 top-0">
       <div className="logo flex  place-items-start ">
-        <img className="h-14 pc:h-16" src={Logo} alt="logo" />
+        <Link to="/">
+          <img className="h-14 pc:h-16" src={Logo} alt="logo" />
+        </Link>
       </div>
 
       <div className="MENU PC  inline-flex ">
@@ -31,6 +33,11 @@ export default function Header({ theme, setTheme }) {
           <ul>
             <Link to="Pokedex">
               <li>pokedex</li>
+            </Link>
+            </ul>
+            <ul>
+            <Link to="WorldMap">
+              <li>World Map</li>
             </Link>
           </ul>
         </div>
