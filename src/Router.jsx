@@ -8,7 +8,7 @@ import Layout from './components/layout/Layout';
 import Howtoplay from './components/Howtoplay';
 import Pokedex from './components/Pokedex';
 import MyTeam from './components/MyTeam';
-import NewTeam from './components/NewTeam';
+import TeamCreation from './pages/TeamCreation';
 
 function LayoutedRoute({ layout: Layout, component: Component, ...rest }) {
   return Layout ? (
@@ -40,7 +40,7 @@ function Router() {
         <LayoutedRoute path="/howtoplay" layout={Layout} component={Howtoplay} />
         <LayoutedRoute path="/Pokedex" layout={Layout} component={Pokedex} />
         <LayoutedRoute path="/test" layout={Layout} component={MyTeam} />
-        <LayoutedRoute path="/myteam" layout={Layout} component={NewTeam} />
+        <LayoutedRoute path="/myteam" layout={Layout} component={TeamCreation} />
       </Switch>
     </BrowserRouter>
   );
