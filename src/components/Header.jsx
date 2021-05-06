@@ -38,6 +38,11 @@ export default function Header({ theme, setTheme }) {
             <Link to="Pokedex" className="focus:text-yellow-200">
               <li>pokedex</li>
             </Link>
+            </ul>
+            <ul>
+            <Link to="WorldMap">
+              <li>World Map</li>
+            </Link>
           </ul>
         </div>
         <MusicButton />

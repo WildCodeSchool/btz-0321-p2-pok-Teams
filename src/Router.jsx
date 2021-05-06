@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from './App';
@@ -9,6 +9,9 @@ import Howtoplay from './components/Howtoplay';
 import Pokedex from './components/Pokedex';
 import MyTeam from './components/MyTeam';
 import TeamCreation from './pages/TeamCreation';
+import NewTeam from './components/NewTeam';
+import WorldMap from './components/WorldMap';
+import BoxInfo from './components/BoxInfo';
 
 function LayoutedRoute({ layout: Layout, component: Component, ...rest }) {
   return Layout ? (
@@ -39,6 +42,9 @@ function Router() {
         <LayoutedRoute path="/myteam" layout={Layout} component={TeamCreation} />
         {/* <TeamCreation team={team} setTeam={setTeam} />
         </LayoutedRoute> */}
+        <LayoutedRoute path="/myteam" layout={Layout} component={NewTeam} />
+        <LayoutedRoute path="/worldmap" layout={Layout} component={WorldMap} />
+        <LayoutedRoute path="/boxinfo" layout={Layout} component={BoxInfo} />
       </Switch>
     </BrowserRouter>
   );
