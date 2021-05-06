@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import PropTypes from 'prop-types';
 
-export default function MyCollection({ url, name }) {
+export default function Pokemon({ url, name, addPokemonToTeam }) {
   const { isLoading, error, data } = useQuery(name, () => fetch(url).then((res) => res.json()));
 
   if (isLoading) return 'Loading...';
@@ -10,7 +10,7 @@ export default function MyCollection({ url, name }) {
   if (error) return 'ERROR !!!' + error.message;
 
   return (
-    <div className="flex flex-col align-center justify-center font-Quantico ">
+    <div className="flex flex-col align-center justify-center text-gray-200 font-Quantico ">
       <div className="">
         <div className="bg-gray-50 w-40 border-2 border-teal-300 rounded-lg flex flex-col text-g text-center m-1.5 shadow-2xl mx-3 my-2 ">
           <div className="flex justify-around bg-teal-500 rounded-t-lg ">
@@ -23,15 +23,17 @@ export default function MyCollection({ url, name }) {
             <p className="text-yellow-500">{data.base_experience} xp </p>
           </div>
         </div>
-        <button className="bg-teal-700 border-2 border-black rounded w-10/12 shadow-2xl ml-4">add to team</button>
+        <button onClick={() => addPokemonToTeam(data)} className=" bg-teal-700 border-2 border-gray-200 rounded w-10/12 shadow-2xl ml-4">
+          add to team
+        </button>
       </div>
     </div>
   );
 }
 
-MyCollection.propTypes = {
+Pokemon.propTypes = {
   url: PropTypes.any.isRequired,
-};
-MyCollection.propTypes = {
   name: PropTypes.any.isRequired,
+  addPokemonToTeam: PropTypes.func.isRequired,
+  team: PropTypes.array.isRequired,
 };

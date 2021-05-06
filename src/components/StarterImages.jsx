@@ -5,10 +5,10 @@ import Pikachu from './img/pikachu.png';
 
 export const StarterImages = [
   {
-    image: Bulbasaur,
+    image: Charmander,
   },
   {
-    image: Charmander,
+    image: Bulbasaur,
   },
   {
     image: Squirtle,

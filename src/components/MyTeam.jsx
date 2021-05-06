@@ -1,20 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
+import { useQuery } from 'react-query';
+import Pokemon from './MyCollection';
 
-import MyCollection from './MyCollection';
-
-const queryClient = new QueryClient();
-
-export default function App() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <MyTeam />
-    </QueryClientProvider>
-  );
-}
-
-function MyTeam() {
+function PokemonList({ addPokemonToTeam }) {
   const { isLoading, error, data } = useQuery('repoData', () => fetch('https://pokeapi.co/api/v2/pokemon/?limit=40').then((res) => res.json()));
 
   if (isLoading) return 'Loading...';
@@ -22,9 +10,8 @@ function MyTeam() {
   if (error) return 'ERROR !!!' + error.message;
 
   return data.results.map((pkm) => {
-    return <MyCollection key={pkm.url} {...pkm} />;
+    return <Pokemon addPokemonToTeam={addPokemonToTeam} key={pkm.url} {...pkm} />;
   });
 }
 
-const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+export default PokemonList;

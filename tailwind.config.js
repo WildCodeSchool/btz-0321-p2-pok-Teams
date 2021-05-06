@@ -276,6 +276,7 @@ module.exports = {
 
     variants: {
       translate: ['responsive', 'hover', 'focus'],
+      backgroundColor: ['responsive', 'hover', 'focus', 'active'],
     },
 
     plugins: [],

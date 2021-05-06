@@ -60,7 +60,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="POKE TEAM LIST xs:mb-2 xs:mt-2 text-center pc:ml-10   ">
+        <div className="POKE TEAM LIST  xs:mb-2 xs:mt-2 text-center pc:ml-10   ">
           <ul className="">
             {teamList.map((team) => {
               return (
@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="RIGHT flex">
+      <div className="RIGHT flex ">
         <div className="LOGOS RESEAUX xs:mt-4 flex flex-col pc:flex-row pc:mt-10  ">
           {networks.map((net, i) => {
             return <img key={i} className="w-10 ml-8 mt-2 pc:h-10" src={net.value} alt="alt" />;
