@@ -9,7 +9,6 @@ import Howtoplay from './components/Howtoplay';
 import Pokedex from './components/Pokedex';
 import MyTeam from './components/MyTeam';
 import TeamCreation from './pages/TeamCreation';
-import NewTeam from './components/NewTeam';
 import WorldMap from './components/WorldMap';
 import BoxInfo from './components/BoxInfo';
 
@@ -42,7 +41,6 @@ function Router() {
         <LayoutedRoute path="/myteam" layout={Layout} component={TeamCreation} />
         {/* <TeamCreation team={team} setTeam={setTeam} />
         </LayoutedRoute> */}
-        <LayoutedRoute path="/myteam" layout={Layout} component={NewTeam} />
         <LayoutedRoute path="/worldmap" layout={Layout} component={WorldMap} />
         <LayoutedRoute path="/boxinfo" layout={Layout} component={BoxInfo} />
       </Switch>
