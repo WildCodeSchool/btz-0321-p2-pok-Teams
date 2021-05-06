@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
-function Pokemon({ url }) {
+function Pokemon({ filter, url }) {
   /*console.log(url);*/
 
   const [pokemonData, setPokemonData] = useState({});
@@ -20,6 +20,10 @@ function Pokemon({ url }) {
       })
       .then((object) => setPokemonData(object));
   }, []);
+
+  if (filter !== '' && pokemonData.type !== filter) {
+    return null;
+  }
 
   return (
     <div className="flex flex-col align-center justify-center font-Quantico ">
@@ -42,5 +46,6 @@ function Pokemon({ url }) {
 
 Pokemon.propTypes = {
   url: PropTypes.string,
+  filter: PropTypes.string.isRequired,
 };
 export default Pokemon;
