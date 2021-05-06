@@ -6,7 +6,7 @@ import StarterImages from './StarterImages';
 import TrainerImages from './TrainerImages';
 import ProfOak from './img/prof.png';
 import './carousel.css';
-import { Link } from 'react-router-dom';
+import {Link} from "react-router-dom";
 
 export default function CharacterCreation() {
   return (
