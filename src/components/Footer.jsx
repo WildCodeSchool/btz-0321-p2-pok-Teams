@@ -35,7 +35,7 @@ export default function Footer() {
   ]);
 
   return (
-    <div className="FOOTER grid grid-cols-3 text-lg justify-center bg-gray-300 bg-opacity-50   mx-2 mt-2 mb-1  rounded-lg  border border-blue-200 ">
+    <div className="FOOTER grid grid-cols-3  justify-center bg-gray-300 bg-opacity-50   mx-2 mt-2 mb-1  rounded-lg  border border-blue-200 ">
       <div className=" COPYRIGHT xs:ml-10 xs:mt-6 pc:ml-10 ">
         <ul className="pc:flex pc:flex-row">
           <li>

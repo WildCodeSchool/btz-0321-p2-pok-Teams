@@ -36,7 +36,7 @@ function Layout({ children }) {
 
   return (
     <ThemeProvider theme={themes[theme]}>
-      <div id="layout" className={`grid w-screen  ${themes[theme].pageBackground}`}>
+      <div id="layout" className={`grid w-screen min-h-screen pc:grid-rows-PCRows ${themes[theme].pageBackground}`}>
         <Header theme={theme} setTheme={setTheme} />
         <div className="bg-yellow-100 bg-opacity-30 m-2" theme={theme}>
           {children}
