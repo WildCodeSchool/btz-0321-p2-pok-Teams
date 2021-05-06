@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
-import { ReactQueryDevtools } from 'react-query/devtools';
+
 import MyCollection from './MyCollection';
 
 const queryClient = new QueryClient();
@@ -10,7 +10,6 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <MyTeam />
-      <ReactQueryDevtools />
     </QueryClientProvider>
   );
 }

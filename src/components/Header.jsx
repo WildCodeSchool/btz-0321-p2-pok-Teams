@@ -8,7 +8,7 @@ import MusicButton from './MusicButton';
 
 export default function Header({ theme, setTheme }) {
   return (
-    <nav className=" items-center justify-between flex  p-3 w-full z-10 top-0">
+    <nav className=" items-center justify-between flex  p-3 w-full">
       <div className="logo flex  place-items-start ">
         <img className="h-14 pc:h-16" src={Logo} alt="logo" />
       </div>
