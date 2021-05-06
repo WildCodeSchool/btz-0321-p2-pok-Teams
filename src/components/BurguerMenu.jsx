@@ -6,7 +6,7 @@ export default function BurguerMenu() {
 
   return (
     <div className="inline-block ">
-      <div className="pc:hidden">
+      <div className="pc:hidden mt-5">
         <button
           id="nav-toggle"
           onClick={() => setShow(!show)}
