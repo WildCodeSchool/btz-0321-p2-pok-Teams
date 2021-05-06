@@ -22,16 +22,20 @@ export default function Header({ theme, setTheme }) {
         <div className="hidden pc:flex text-center items-center font-Quantico text-2xl space-x-10">
           <ul>
             <li>
-              <Link to="howtoplay">how to play</Link>
+              <Link to="howtoplay" className="focus:text-yellow-200">
+                how to play
+              </Link>
             </li>
           </ul>
           <ul>
             <li>
-              <Link to="myteam">my team</Link>
+              <Link to="myteam" className="focus:text-yellow-200">
+                my team
+              </Link>
             </li>
           </ul>
           <ul>
-            <Link to="Pokedex">
+            <Link to="Pokedex" className="focus:text-yellow-200">
               <li>pokedex</li>
             </Link>
           </ul>

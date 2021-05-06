@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from './App';
@@ -12,14 +12,7 @@ import TeamCreation from './pages/TeamCreation';
 
 function LayoutedRoute({ layout: Layout, component: Component, ...rest }) {
   return Layout ? (
-    <Route
-      {...rest}
-      render={(props) => (
-        <Layout>
-          <Component {...props} />
-        </Layout>
-      )}
-    />
+    <Route {...rest} render={(props) => <Layout>{Component ? <Component {...props} /> : <Children {...props} />}</Layout>} />
   ) : (
     <Route {...rest} component={Component} />
   );
@@ -28,9 +21,12 @@ function LayoutedRoute({ layout: Layout, component: Component, ...rest }) {
 LayoutedRoute.propTypes = {
   layout: PropTypes.node,
   component: PropTypes.node,
+  chilrdren: PropTypes.node,
 };
 
 function Router() {
+  // const [team, setTeam] = useState([]);
+
   return (
     <BrowserRouter>
       <Switch>
@@ -41,6 +37,8 @@ function Router() {
         <LayoutedRoute path="/Pokedex" layout={Layout} component={Pokedex} />
         <LayoutedRoute path="/test" layout={Layout} component={MyTeam} />
         <LayoutedRoute path="/myteam" layout={Layout} component={TeamCreation} />
+        {/* <TeamCreation team={team} setTeam={setTeam} />
+        </LayoutedRoute> */}
       </Switch>
     </BrowserRouter>
   );

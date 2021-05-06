@@ -20,8 +20,11 @@ export default function TeamCreation() {
       <div className="flex xs:flex-wrap ">
         {team.map((teammate) => (
           <div key={teammate.data}>
-            {' '}
-            <div className="bg-gray-50 text-gray-200 w-40 border-2 border-teal-300 rounded-lg flex flex-col text-g text-center m-1.5 shadow-2xl mx-3 my-2 ">
+            {/* <button>
+              <XCircleIcon className="w-4 text-teal-600" />{' '}
+            </button> */}
+
+            <div className="bg-gray-50 text-gray-200 w-40 border-2 border-teal-300 rounded-lg flex flex-col text-g text-center m-1.5 shadow-2xl mx-2 my-2 ">
               <div className="flex justify-around bg-teal-500 rounded-t-lg ">
                 <h2 className="text-lg">{teammate.name}</h2>
                 <p className=" text-lg  "> {teammate.id}</p>
@@ -34,19 +37,9 @@ export default function TeamCreation() {
             </div>
           </div>
         ))}
-        {/* <div className="flex justify-end">
-              <button>
-                {' '}
-                <XCircleIcon className="w-4 text-teal-600" />{' '}
-              </button>
-            </div>
-            <li className="bg-gray-50 w-40 h-40 border-2 border-teal-300 rounded-lg flex flex-col text-g text-center m-1.5 shadow-2xl mx-3 xs:mx-1 my-2 ">
-              {' '}
-              hello{' '}
-            </li> */}
       </div>
       <h2 className="text-4xl px-4  py-6 font-extrabold">My Collection</h2>
-      <div className="flex flex-wrap xs:-mx-3 xs:pl-2">
+      <div className=" flex flex-wrap xs:-mx-3 xs:pl-2">
         <PokemonList addPokemonToTeam={addPokemonToTeam} />
       </div>
     </div>

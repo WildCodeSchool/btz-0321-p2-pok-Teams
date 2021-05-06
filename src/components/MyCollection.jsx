@@ -23,7 +23,7 @@ export default function Pokemon({ url, name, addPokemonToTeam }) {
             <p className="text-yellow-500">{data.base_experience} xp </p>
           </div>
         </div>
-        <button onClick={() => addPokemonToTeam(data)} className="bg-teal-700 border-2 border-gray-200 rounded w-10/12 shadow-2xl ml-4">
+        <button onClick={() => addPokemonToTeam(data)} className=" bg-teal-700 border-2 border-gray-200 rounded w-10/12 shadow-2xl ml-4">
           add to team
         </button>
       </div>
@@ -35,4 +35,5 @@ Pokemon.propTypes = {
   url: PropTypes.any.isRequired,
   name: PropTypes.any.isRequired,
   addPokemonToTeam: PropTypes.func.isRequired,
+  team: PropTypes.array.isRequired,
 };
