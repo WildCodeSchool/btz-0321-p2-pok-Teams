@@ -33,13 +33,13 @@ function Pokemon({ filter, url }) {
   return (
     <div className="flex flex-col align-center justify-center font-Quantico ">
       <div className="">
-        <div className="bg-gray-50 w-40 border-2 border-blue-300 rounded-lg flex flex-col text-g text-center m-1.5 shadow-2xl mx-3 my-2 ">
-          <div className="flex justify-around bg-blue-200">
+        <div className="bg-gray-50 w-40 border-2 border-teal-300 rounded-lg flex flex-col text-g text-center m-1.5 shadow-2xl mx-3 my-2 ">
+          <div className="flex justify-around bg-teal-500 rounded-t-lg">
             <h2 className="text-xl">{pokemonData.name}</h2>
             <p className=" text-lg  "> {pokemonData.id}</p>
           </div>
           <img className="flex justify-center " src={pokemonData.sprites} alt={pokemonData.name} />
-          <div className="flex justify-around bg-blue-200 ">
+          <div className="flex justify-around bg-teal-500 rounded-b-lg ">
             <p>
               <BoxInfo pokemonData={pokemonData} />
             </p>

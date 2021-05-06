@@ -6,7 +6,7 @@ export default function BurguerMenu() {
 
   return (
     <div className="inline-block ">
-      <div className="pc:hidden">
+      <div className="pc:hidden mt-5">
         <button
           id="nav-toggle"
           onClick={() => setShow(!show)}
@@ -18,7 +18,7 @@ export default function BurguerMenu() {
         </button>
       </div>
 
-      <div className={`${!show && 'hidden'} absolute transform -translate-x-16  pc:flex pc:items-center bg-yellow-500 pt-6" id="nav-content`}>
+      <div className={`${!show && 'hidden'} absolute transform -translate-x-16 text-xl pc:flex pc:items-center bg-yellow-500 pt-6" id="nav-content`}>
         <ul className=" flex-1 items-center mt-4">
           <li className="mr-3">
             <a className="inline-block  px-4 text-white no-underline" href="howtoplay">
