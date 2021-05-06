@@ -37,8 +37,7 @@ function OnTheme({ theme, setTheme }) {
 }
 
 OnTheme.propTypes = {
-  changeTheme: PropTypes.object.isRequired,
-  setTheme: PropTypes.string.isRequired,
+  setTheme: PropTypes.func.isRequired,
   theme: PropTypes.string.isRequired,
 };
 

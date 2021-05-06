@@ -10,6 +10,7 @@ import Pokedex from './components/Pokedex';
 import MyTeam from './components/MyTeam';
 import NewTeam from './components/NewTeam';
 import WorldMap from './components/WorldMap';
+import BoxInfo from './components/BoxInfo';
 
 function LayoutedRoute({ layout: Layout, component: Component, ...rest }) {
   return Layout ? (
@@ -43,6 +44,7 @@ function Router() {
         <LayoutedRoute path="/test" layout={Layout} component={MyTeam} />
         <LayoutedRoute path="/myteam" layout={Layout} component={NewTeam} />
         <LayoutedRoute path="/worldmap" layout={Layout} component={WorldMap} />
+        <LayoutedRoute path="/boxinfo" layout={Layout} component={BoxInfo} />
       </Switch>
     </BrowserRouter>
   );

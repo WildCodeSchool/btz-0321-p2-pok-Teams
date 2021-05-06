@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 const sentences = [
   'Welcome to the Pokemon Encyclopedia ! Find here all your discovered Pokemons and see their properties.',
-  'Try to sort the Pokemons by his type and watch the list change.',
-  'You can see more informations by clicking on the pokemon you like.',
+  'Try to sort the Pokemons by his type and watch the list change. You can see more informations by clicking on the pokemon you like.',
 ];
 
 export default function TypePokedex() {
@@ -47,7 +46,7 @@ export default function TypePokedex() {
 
   return (
     <>
-      <h1>{`${sentences[index].substring(0, subIndex)}${blink ? '|' : ' '}`}</h1>
+      <p className="pc:p-8 p-1 h-40"> {`${sentences[index].substring(0, subIndex)}${blink ? '|' : ' '}`}</p>
     </>
   );
 }
