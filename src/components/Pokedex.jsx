@@ -38,13 +38,11 @@ export default function Pokedex() {
   };
 
   return (
-    <div className="flex flex-col mt-9">
+    <div className="flex flex-col mt-20">
       <div className="font-Quantico flex flex-row justify-center ">
-        <img className="pokedex image h-20" alt="pokedex img" src={pokedex} />
-        <div className="flex justify-between w-1/2 pc:w-2/5 ml-9 pc:min-w-100 border-4 border-black bg-gray-500 rounded-tr-3xl rounded-bl-3xl rounded-tl-md rounded-br-md  ">
-          <p className="pc:p-4 p-1 ">
-            <TypePokedex />
-          </p>
+        <img className="pokedex image h-40" alt="pokedex img" src={pokedex} />
+        <div className="flex justify-between w-2/3 pc:w-2/5 ml-9 pc:min-w-100 border-4 border-black bg-gray-500 rounded-tr-3xl rounded-bl-3xl rounded-tl-md rounded-br-md  ">
+          <TypePokedex />
         </div>
       </div>
       <div className="mt-5 flex flex-row justify-end mr-10">
