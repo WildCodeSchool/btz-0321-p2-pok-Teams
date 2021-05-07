@@ -10,7 +10,7 @@ export default function Formulaire() {
   let history = useHistory();
 
   function handleClick() {
-    history.push('/register');
+    history.push('/howtoplay');
   }
   const {
     register,
