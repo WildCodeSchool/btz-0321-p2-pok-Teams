@@ -27,8 +27,6 @@ LayoutedRoute.propTypes = {
 };
 
 function Router() {
-  // const [team, setTeam] = useState([]);
-
   return (
     <BrowserRouter>
       <Switch>
@@ -39,8 +37,6 @@ function Router() {
         <LayoutedRoute path="/Pokedex" layout={Layout} component={Pokedex} />
         <LayoutedRoute path="/test" layout={Layout} component={MyTeam} />
         <LayoutedRoute path="/myteam" layout={Layout} component={TeamCreation} />
-        {/* <TeamCreation team={team} setTeam={setTeam} />
-        </LayoutedRoute> */}
         <LayoutedRoute path="/worldmap" layout={Layout} component={WorldMap} />
         <LayoutedRoute path="/boxinfo" layout={Layout} component={BoxInfo} />
       </Switch>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PokemonList from '../components/MyTeam';
 import Red from '../components/img/redt.png';
+import RemoveButton from '../components/RemoveButton';
+
 
 export default function TeamCreation() {
   const [team, setTeam] = useState([]);
@@ -19,6 +21,9 @@ export default function TeamCreation() {
       <div className="flex xs:flex-wrap ">
         {team.map((teammate) => (
           <div key={teammate.data}>
+        {team.map((teammate, index) => (
+          <div key={index}>
+            <RemoveButton setTeam={setTeam} index={index} team={team} teammate={teammate} />
             <div className="bg-gray-50 text-gray-200 w-40 border-2 border-teal-300 rounded-lg flex flex-col text-g text-center m-1.5 shadow-2xl mx-2 my-2 ">
               <div className="flex justify-around bg-teal-500 rounded-t-lg ">
                 <h2 className="text-lg">{teammate.name}</h2>

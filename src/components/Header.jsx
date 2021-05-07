@@ -28,6 +28,13 @@ export default function Header({ theme, setTheme }) {
             </ul>
             <ul>
               <li>
+                <Link to="register" className="focus:text-yellow-500">
+                  profile
+                </Link>
+              </li>
+            </ul>
+            <ul>
+              <li>
                 <Link to="myteam" className="focus:text-yellow-500">
                   my team
                 </Link>
@@ -37,11 +44,6 @@ export default function Header({ theme, setTheme }) {
               {' '}
               <Link to="Pokedex" className="focus:text-yellow-500">
                 <li>pokedex</li>
-              </Link>
-            </ul>
-            <ul>
-              <Link to="worldmap" className="focus:text-yellow-500">
-                <li>world map</li>
               </Link>
             </ul>
           </div>
