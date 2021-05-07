@@ -10,12 +10,12 @@ import Copyright from './img/copyright.png';
 
 export default function Footer() {
   const [companies] = useState([
-    { className: 'font-extrabold', value: 'The pokemon company' },
+    { className: 'font-extrabold', value: 'The Pokemon Company' },
     {
       className: '',
       value: (
-        <a href="https://press.pokemon.com/en" target="blank">
-          Press
+        <a href="https://github.com/WildCodeSchool/btz-0321-p2-pok-Teams" target="blank">
+          Github project
         </a>
       ),
     },
@@ -71,21 +71,21 @@ export default function Footer() {
 
   return (
     <div className="FOOTER grid grid-cols-3 text-lg justify-center bg-gray-300 bg-opacity-50   mx-2 mt-2 mb-1  rounded-lg  border border-blue-200 ">
-      <div className=" COPYRIGHT xs:ml-10 xs:mt-6 pc:ml-10 ">
-        <ul className="pc:flex pc:flex-row">
+      <div className=" COPYRIGHT xs:mt-10 xs:ml-10  pc:ml-28 ">
+        <ul className="pc:flex pc:flex-col">
           <li>
             <a href="https://www.youtube.com/watch?v=H3x3-22Gi3g">
               <img className="w-10 " src={Pokeball} alt="alt" />
             </a>
           </li>
           <li>
-            <img className="w-10 xs:mt-14 pc:mt-0 pc:ml-20" src={Copyright} alt="alt" />
+            <img className="w-10 pc:mt-8 xs:mt-56" src={Copyright} alt="alt" />
           </li>
-          <li className="pc:mt-10 ">2021</li>
+          <li className=" ">2021</li>
         </ul>
       </div>
-      <div className="CENTER xs:mt-4 pc:flex pc:flex-row pc:mt-4">
-        <div className=" COMPANY LIST text-center  pc:mb-2 pc:mr-5">
+      <div className="CENTER xs:mt-4 pc:flex  pc:flex-row">
+        <div className=" COMPANY LIST text-center pc:mb-2 pc:mr-5">
           <ul className="">
             {companies.map((company) => {
               return (
@@ -97,7 +97,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="POKE TEAM LIST  xs:mb-2 xs:mt-2 text-center pc:ml-10   ">
+        <div className="POKE TEAM LIST  xs:mb-2 xs:mt-5 pc:mt-0  text-center pc:ml-10   ">
           <ul className="">
             {teamList.map((team) => {
               return (
@@ -111,7 +111,7 @@ export default function Footer() {
       </div>
 
       <div className="RIGHT flex ">
-        <div className="LOGOS RESEAUX xs:mt-4 flex flex-col pc:flex-row pc:mt-10  ">
+        <div className="LOGOS RESEAUX xs:mt-10 flex flex-col pc:flex-row pc:mt-32  ">
           {networks.map((net, i) => {
             return <img key={i} className="w-10 ml-8 mt-2 pc:h-10" src={net.value} alt="alt" />;
           })}

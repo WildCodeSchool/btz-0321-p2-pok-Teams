@@ -32,7 +32,7 @@ export default function BoxInfo({ pokemonData }) {
       <button
         className={`${
           colors[pokemonData.type]
-        } text-white active:bg-pink-600 font-bold uppercase text-sm px-3 mt-2 shadow-md py-2 rounded hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150`}
+        } text-white active:bg-pink-600 font-bold uppercase text-sm px-3 mt-2 shadow-md py-2 rounded hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-200`}
         type="button"
         onClick={() => setShowModal(true)}>
         {pokemonData.type}
