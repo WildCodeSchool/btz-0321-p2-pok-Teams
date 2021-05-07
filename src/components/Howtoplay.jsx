@@ -6,8 +6,7 @@ import imgEvoli from './img/evoli.png';
 
 export default function Howtoplay() {
   const theme = useContext(ThemeContext);
-
-  const imgContainer = 'w-full flex flex-col items-center px-16';
+const imgContainer = 'w-full flex flex-col items-center px-16';
   const imgContainerPc = 'pc:flex-row pc:justify-center';
   const imgClass = 'flex justify-center bg-yellow-50 h-auto px-4 w-auto border-4 border-black border-radius rounded-lg m-1';
   const imgClassSm = 'm-3';
@@ -24,8 +23,7 @@ export default function Howtoplay() {
           configuration to win each battle.
         </p>
       </div>
-
-      <div className={`imgcontainer ${imgContainer} ${imgContainerPc}`}>
+<div className={`imgcontainer ${imgContainer} ${imgContainerPc}`}>
         <img className={`pokeimg ${imgClass} ${imgClassSm} ${imgClassPc}`} src={imgLeviator} alt="" />
         <img className={`pokeimg ${imgClass} ${imgClassSm} ${imgClassPc}`} src={imgPika} alt="" />
         <img className={`pokeimg ${imgClass} ${imgClassSm} ${imgClassPc}`} src={imgEvoli} alt="" />

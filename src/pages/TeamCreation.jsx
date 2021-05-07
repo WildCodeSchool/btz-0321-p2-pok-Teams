@@ -3,6 +3,7 @@ import PokemonList from '../components/MyTeam';
 import Red from '../components/img/redt.png';
 import RemoveButton from '../components/RemoveButton';
 
+
 export default function TeamCreation() {
   const [team, setTeam] = useState([]);
 
@@ -13,11 +14,13 @@ export default function TeamCreation() {
       <div className="flex justify-between xs:flex-wrap  py-6 px-4">
         <div className="flex ">
           <img className="w-6 xs:w-10 xs:h-10" src={Red} alt="playersTrainer" />
-          <h2 className="text-4xl xs:text-xl font-extrabold">&#60;Player&#62;&#39;s Team</h2>
+          <h2 className="text-4xl xs:text-xl font-extrabold">Joseph&#39;s Team</h2>
         </div>
         <p className="text-4xl xs:text-xl xs:pl-10">current team {team.length}/6</p>
       </div>
       <div className="flex xs:flex-wrap ">
+        {team.map((teammate) => (
+          <div key={teammate.data}>
         {team.map((teammate, index) => (
           <div key={index}>
             <RemoveButton setTeam={setTeam} index={index} team={team} teammate={teammate} />

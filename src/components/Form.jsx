@@ -43,7 +43,7 @@ export default function Formulaire() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="CLOSE cursor-pointer flex justify-center flex-row">
             <div className="mt-5 flex-row text-center">
-              <p>Meanwhile our game is ready, we have opened to you few features to try and play with.</p>
+              <p>Our game is not ready yet, but we have opened to you a few features to try and play with.</p>
               <p>Subscribe to follow the incoming news and discover how to be the best trainer!</p>
             </div>
             <div>
@@ -99,7 +99,7 @@ export default function Formulaire() {
             <input className="px-6 shadow-md rounded-md tm-3 p-1" placeholder="Best_trainer64@Wild.com" type="email" {...register('email')} />
           </div>
           <div className="flex flex-row justify-center mt-5">
-            <label htmlFor="isDeveloper">I Agree therms and Conditions</label>
+            <label htmlFor="isDeveloper">I Agree terms and Conditions</label>
             <input className="ml-6" type="checkbox" placeholder="luo" value="yes" required {...register('isDeveloper')} />
           </div>
           <input className="bg-red-700 mb-3 rounded-md py-3 px-7 shadow-md" type="submit" />
