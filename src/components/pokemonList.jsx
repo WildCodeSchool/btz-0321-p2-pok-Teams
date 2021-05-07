@@ -9,7 +9,6 @@ function PokemonList({ filter, pokemons }) {
       {pokemons.map((pokemon, index) => {
         return <Pokemon filter={filter} key={index} url={pokemon.url} />;
       })}
-      ;
     </div>
   );
 }
