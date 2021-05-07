@@ -1,21 +1,16 @@
-
 import React, { useContext } from 'react';
-import  { ThemeContext } from 'styled-components';
+import { ThemeContext } from 'styled-components';
 import imgLeviator from './img/leviator.png';
 import imgPika from './img/pika.png';
 import imgEvoli from './img/evoli.png';
 
-
-
 export default function Howtoplay() {
   const theme = useContext(ThemeContext);
 
-
-  
   const imgContainer = 'w-full flex flex-col items-center px-16';
   const imgContainerPc = 'pc:flex-row pc:justify-center';
   const imgClass = 'flex justify-center bg-yellow-50 h-auto px-4 w-auto border-4 border-black border-radius rounded-lg m-1';
-  const imgClassSm ='m-3';
+  const imgClassSm = 'm-3';
   const imgClassPc = 'pc:mt-0 pc:ml-10 pc:w-1/5 pc:h-auto';
   const catchMeAll = 'm-12 border-4 border-black shadow-2xl bg-gray-500 rounded-tr-3xl rounded-bl-3xl rounded-tl-md rounded-br-md';
 
@@ -29,7 +24,7 @@ export default function Howtoplay() {
           configuration to win each battle.
         </p>
       </div>
-      
+
       <div className={`imgcontainer ${imgContainer} ${imgContainerPc}`}>
         <img className={`pokeimg ${imgClass} ${imgClassSm} ${imgClassPc}`} src={imgLeviator} alt="" />
         <img className={`pokeimg ${imgClass} ${imgClassSm} ${imgClassPc}`} src={imgPika} alt="" />

@@ -21,7 +21,7 @@ export default function BurguerMenu() {
       <div className={`${!show && 'hidden'} absolute transform -translate-x-16 text-xl pc:flex pc:items-center bg-yellow-500 pt-6" id="nav-content`}>
         <ul className=" flex-1 items-center mt-4">
           <li className="mr-3">
-            <a className="inline-block  px-4 text-white no-underline" href="howtoplay">
+            <a className="inline-block  px-4 text-gray-600 hover:text-gray-200 no-underline" href="howtoplay">
               How to play
             </a>
           </li>
