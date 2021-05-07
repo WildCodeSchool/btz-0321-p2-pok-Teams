@@ -111,7 +111,7 @@ export default function Footer() {
       </div>
 
       <div className="RIGHT flex ">
-        <div className="LOGOS RESEAUX xs:mt-10 flex flex-col pc:flex-row pc:mt-32  ">
+        <div className="LOGOS RESEAUX xs:mt-10 flex flex-col pc:flex-row pc:mt-18  ">
           {networks.map((net, i) => {
             return <img key={i} className="w-10 ml-8 mt-2 pc:h-10" src={net.value} alt="alt" />;
           })}
