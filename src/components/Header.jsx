@@ -13,7 +13,7 @@ export default function Header({ theme, setTheme }) {
           <img className="h-14 pc:h-16 pc:ml-10 ml-3" src={Logo} alt="logo" />
         </Link>
       </div>
-      <div className="bg-gray-200 bg-opacity-60 pc:pl-80 pl-8 pb-2 rounded-2xl mr-4 shadow-2xl">
+      <div className="bg-gray-300 bg-opacity-60 pc:pl-80 pl-8 pb-2 rounded-2xl mr-4 shadow-2xl">
         <div className="MENU PC inline-flex  justify-end">
           <div className="block  mr-5 pc:hidden ">
             <BurguerMenu />
@@ -41,7 +41,7 @@ export default function Header({ theme, setTheme }) {
             </ul>
             <ul>
               <Link to="worldmap" className="focus:text-yellow-500">
-                <li>World Map</li>
+                <li>world map</li>
               </Link>
             </ul>
           </div>
