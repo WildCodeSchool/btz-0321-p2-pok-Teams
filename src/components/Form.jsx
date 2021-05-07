@@ -100,7 +100,7 @@ export default function Formulaire() {
           </div>
           <div className="flex flex-row justify-center mt-5">
             <label htmlFor="isDeveloper">I Agree therms and Conditions</label>
-            <input className="ml-6" type="checkbox" placeholder="luo" value="yes" {...register('isDeveloper')} />
+            <input className="ml-6" type="checkbox" placeholder="luo" value="yes" required {...register('isDeveloper')} />
           </div>
           <input className="bg-red-700 mb-3 rounded-md py-3 px-7 shadow-md" type="submit" />
           <button id="goplay" show={showForm} onClick={handleClick} className=" bg-red-700 mt-5 mb-3 rounded-md py-3 px-7 shadow-md ml-3 ">

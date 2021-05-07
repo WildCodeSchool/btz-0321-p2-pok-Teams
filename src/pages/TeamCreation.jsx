@@ -38,7 +38,7 @@ export default function TeamCreation() {
           </div>
         ))}
       </div>
-      <h2 className="text-4xl px-4  py-6 font-extrabold">My Collection</h2>
+      <h2 className="text-4xl px-4 py-6 font-extrabold">My Collection</h2>
       <div className=" flex flex-wrap xs:-mx-3 xs:pl-2">
         <PokemonList addPokemonToTeam={addPokemonToTeam} />
       </div>

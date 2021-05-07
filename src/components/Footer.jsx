@@ -11,11 +11,46 @@ import Copyright from './img/copyright.png';
 export default function Footer() {
   const [companies] = useState([
     { className: 'font-extrabold', value: 'The pokemon company' },
-    { className: '', value: 'Press' },
-    { className: '', value: 'Customer services' },
-    { className: '', value: 'Legal terms' },
-    { className: '', value: 'News' },
-    { className: '', value: 'ToS' },
+    {
+      className: '',
+      value: (
+        <a href="https://press.pokemon.com/en" target="blank">
+          Press
+        </a>
+      ),
+    },
+    {
+      className: '',
+      value: (
+        <a href="https://support.pokemon.com/hc/en-us/" target="blank">
+          Customer Services
+        </a>
+      ),
+    },
+    {
+      className: '',
+      value: (
+        <a href="https://www.pokemon.com/us/legal/" target="blank">
+          Legal Information
+        </a>
+      ),
+    },
+    {
+      className: '',
+      value: (
+        <a href="https://www.pokemon.com/us/terms-of-use/" target="blank">
+          Terms of Use
+        </a>
+      ),
+    },
+    {
+      className: '',
+      value: (
+        <a href="https://www.pokemon.com/us/pokemon-news/" target="blank">
+          News
+        </a>
+      ),
+    },
   ]);
 
   const [networks] = useState([
@@ -39,7 +74,9 @@ export default function Footer() {
       <div className=" COPYRIGHT xs:ml-10 xs:mt-6 pc:ml-10 ">
         <ul className="pc:flex pc:flex-row">
           <li>
-            <img className="w-10 " src={Pokeball} alt="alt" />
+            <a href="https://www.youtube.com/watch?v=H3x3-22Gi3g">
+              <img className="w-10 " src={Pokeball} alt="alt" />
+            </a>
           </li>
           <li>
             <img className="w-10 xs:mt-14 pc:mt-0 pc:ml-20" src={Copyright} alt="alt" />
